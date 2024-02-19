@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@media(max-width: 768px){
+    #product-info {
+        gap: 0.5rem;
+    }
+    form.form.flex.flex-col.gap-4.lg\:flex-row {
+        margin-top: 10px;
+    }
+    legend.text-sm {
+        display: none;
+    }
+}
+.flex.justify-center.text-center.rounded-md.border.border-gray-300.grow {
+    color: black;
+}
+@font-face {
+    font-family: Inter;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url("//www.gummyhair.com.br/cdn/fonts/inter/inter_n3.b5848dd787e2cf31c3821b141f8ea5597b5bbbc6.woff2?h1=Z3VtbXloYWlyLmNvbS5icg&h2=Z3VtbXloYWlyZGV2LmFjY291bnQubXlzaG9waWZ5LmNvbQ&hmac=99c0e81f59a840ce46371cc5665139561b0a4e7db886b0b89bb2918fa4dbd132") format("woff2"),
+    url("//www.gummyhair.com.br/cdn/fonts/inter/inter_n3.078496ce0ef17acfeb2cbe1a007aee39385f4498.woff?h1=Z3VtbXloYWlyLmNvbS5icg&h2=Z3VtbXloYWlyZGV2LmFjY291bnQubXlzaG9waWZ5LmNvbQ&hmac=f6c87442f48e0c6f0811b4d4e8f696d51d7b5bec4d481c5f9441eaabff9dffb3") format("woff");
+}
+@font-face {
+    font-family: Inter;
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("//www.gummyhair.com.br/cdn/fonts/inter/inter_n7.50ef4139896edec0637fde057914fbf7e3a8d56e.woff2?h1=Z3VtbXloYWlyLmNvbS5icg&h2=Z3VtbXloYWlyZGV2LmFjY291bnQubXlzaG9waWZ5LmNvbQ&hmac=334e9769ccdf04b53f7460b13a7a88e8a895cdbf44024f0d6793cf19d6b7235b") format("woff2"),
+    url("//www.gummyhair.com.br/cdn/fonts/inter/inter_n7.194c3d3f64efd8e4c82bbbe83dc84f5893fd9087.woff?h1=Z3VtbXloYWlyLmNvbS5icg&h2=Z3VtbXloYWlyZGV2LmFjY291bnQubXlzaG9waWZ5LmNvbQ&hmac=e37f74f2dbfe2b7c4a4b7d020a2c265325c1bf322c4cc96dc3a3625e21df0dd0") format("woff");
+}
+@font-face {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("//www.gummyhair.com.br/cdn/fonts/poppins/poppins_n7.58aca33913fc6666cc9e8a53f6b16ec5c3c05a3f.woff2?h1=Z3VtbXloYWlyLmNvbS5icg&h2=Z3VtbXloYWlyZGV2LmFjY291bnQubXlzaG9waWZ5LmNvbQ&hmac=0b94163be013b12a710d0da1711e567f7bdd599021827bce650441600fd35d1c") format("woff2"),
+    url("//www.gummyhair.com.br/cdn/fonts/poppins/poppins_n7.59016f931f3f39434d2e458fba083eb7db7a07d9.woff?h1=Z3VtbXloYWlyLmNvbS5icg&h2=Z3VtbXloYWlyZGV2LmFjY291bnQubXlzaG9waWZ5LmNvbQ&hmac=8e93a9ad166522ba01e9e6388f5bc2220a3b95cdb335ee8c37dc12bc8a94ffaf") format("woff");
+}
+@font-face {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("//www.gummyhair.com.br/cdn/fonts/poppins/poppins_n4.934accbf9f5987aa89334210e6c1e9151f37d3b6.woff2?h1=Z3VtbXloYWlyLmNvbS5icg&h2=Z3VtbXloYWlyZGV2LmFjY291bnQubXlzaG9waWZ5LmNvbQ&hmac=2c6c03cdc51ed9b080c30b3278baa1ac77efef42709104c7fc2493b5ad674f93") format("woff2"),
+    url("//www.gummyhair.com.br/cdn/fonts/poppins/poppins_n4.ee28d4489eaf5de9cf6e17e696991b5e9148c716.woff?h1=Z3VtbXloYWlyLmNvbS5icg&h2=Z3VtbXloYWlyZGV2LmFjY291bnQubXlzaG9waWZ5LmNvbQ&hmac=d2ea243dfebe62d6a71d694e3e174411108e08d628c226cd3ad09dcd2ac0ec4d") format("woff");
+}
+:root {
+
+    --price-color-discount: 255, 0, 0;
+    --image-border-thickness: 0px;
+    --image-border-opacity: 0.0;
+    --image-border-radius: 8px;
+
+    --font-header-weight: 600;
+
+    /* variants pills */
+    --variant-pills-radius: 10px;
+    --variant-pills-border-width: 1px;
+    --variant-pills-border-opacity: 0.55;
+    --variant-pills-shadow-opacity: 0.0;
+    --variant-pills-shadow-horizontal-offset: 0px;
+    --variant-pills-shadow-vertical-offset: 0px;
+    --variant-pills-shadow-blur-radius: 0px;
+
+    --color-base-link: 0, 0, 0;
+    --color-base-text: 62, 62, 62;
+    --color-base-bold: 255, 128, 181;
+    --color-base-italic: 181, 133, 226;
+
+    --color-base-accent-1: 255, 128, 181;
+    --color-base-accent-2: 0, 171, 209;
+    --color-base-accent-3: 0, 190, 150;
+    --color-base-accent-4: 200, 147, 91;
+    --color-base-accent-5: 252, 228, 165;
+    --color-base-accent-6: 35, 162, 236;
+    --color-base-accent-7: 255, 167, 92;
+    --color-base-accent-8: 247, 254, 227;
+    --color-base-accent-9: 121, 0, 128;
+    --color-base-accent-10: 180, 180, 180;
+
+    --color-base-background-1: 255, 128, 181;
+    --color-base-background-2: 35, 162, 236;
+    --color-base-background-3: 54, 54, 54;
+    --color-base-background-4: 130, 77, 180;
+    --color-base-background-5: 255, 128, 181;
+    --color-base-background-6: 12, 93, 142;
+    --color-base-background-7: 255, 167, 92;
+    --color-base-background-8: 255, 241, 249;
+    --color-base-background-9: 147, 213, 199;
+    --color-base-background-10: 145, 215, 255;
+
+    --gradient-base-background-1: linear-gradient(180deg, rgba(248, 247, 244, 1), rgba(248, 247, 244, 1) 100%);
+    --gradient-base-background-2: linear-gradient(180deg, rgba(255, 232, 235, 0.32), rgba(255, 232, 235, 1) 70%);
+    --gradient-base-background-3: linear-gradient(180deg, rgba(194, 160, 226, 1), rgba(223, 126, 219, 0.25) 100%);
+    --gradient-base-background-4: radial-gradient(rgba(1, 175, 244, 1) 15%, rgba(3, 100, 160, 1) 100%);
+    --gradient-base-background-5: background;
+    --gradient-base-background-6: radial-gradient(rgba(221, 241, 255, 1) 4%, rgba(76, 175, 241, 1) 100%);
+    --gradient-base-background-7: radial-gradient(rgba(227, 238, 201, 1) 11%, rgba(170, 248, 219, 1) 86%);
+    --gradient-base-background-8: radial-gradient(rgba(255, 248, 240, 1), rgba(239, 220, 195, 1) 100%);
+    --gradient-base-background-9: linear-gradient(180deg, rgba(115, 7, 176, 1) 4%, rgba(115, 7, 176, 1) 100%);
+    --gradient-base-background-10: linear-gradient(271deg, rgba(253, 197, 220, 1) 21%, rgba(253, 197, 220, 1) 98%);
+
+    --font-body-family: Plus Jakarta Sans Regular, sans-serif;
+    --font-body-style: normal;
+    --font-body-weight: 300;
+    --font-body-weight-bold: 600;
+
+    --font-accent-family: Paytone One, sans-serif;
+    --font-accent-style: normal;
+    --font-accent-weight: 700;
+
+    --accent-line-height: 0.3;
+    --heading-line-height: 0.3;
+    --body-line-height: 0.8;
+
+    --font-heading-family: Paytone One, sans-serif;
+    --font-heading-style: normal;
+    --font-heading-weight: 400;
+
+    --font-body-scale: 0.9;
+    --font-accent-scale: 0.9;
+    --font-heading-scale: 1.0;
+
+    --use-text-style-background: false;
+
+    --spacing-margin-top: 0px;
+    --spacing-margin-bottom: 0px;
+    --spacing-padding-top: 20px;
+    --spacing-padding-bottom: 20px;
+
+    --inputs-radius: 10px;
+    --inputs-border-width: 1px;
+    --inputs-border-opacity: 0.55;
+    --inputs-shadow-opacity: 0.0;
+    --inputs-margin-offset: 0px;
+    --inputs-shadow-horizontal-offset: 0px;
+    --inputs-shadow-vertical-offset: 0px;
+    --inputs-shadow-blur-radius: 0px;
+    --inputs-radius-outset: 11px;
+
+    /* button */
+    --button-border-color-1: 244, 207, 207;
+
+    --button-text-color-1: 255, 255, 255;
+    --button-text-color-2: 255, 255, 255;
+    --button-text-color-3: 209, 209, 209;
+
+    --buttons-color-base-accent-1: 0, 190, 150, 1.0;
+    --buttons-color-base-accent-2: 118, 205, 255, 1.0;
+    --buttons-color-base-accent-3: 255, 100, 165, 1.0;
+
+    --buttons-color-primary-background: 118, 205, 255;
+    --buttons-color-primary-font: 255, 255, 255;
+    --buttons-color-secondary-background: 118, 205, 255;
+    --buttons-color-secondary-font: 255, 255, 255;
+    --buttons-color-success-background: 0, 190, 150;
+    --buttons-color-success-font: 255, 255, 255;
+
+    --buttons-gradient-base-accent-1: linear-gradient(270deg, rgba(200, 147, 91, 1), rgba(232, 182, 115, 1) 100%);
+    --buttons-gradient-base-accent-2: linear-gradient(316deg, rgba(74, 218, 141, 1), rgba(145, 231, 80, 1) 100%);
+    --buttons-gradient-base-accent-3: #ff64a5;
+    --buttons-gradient-base-accent-4: ;
+    --buttons-gradient-base-accent-5: ;
+
+    /* text fields */
+    --input-color-accent-1: 62, 62, 62, 1.0;
+
+    --input-background-accent-1: 255, 255, 255, 1.0;
+
+    --buttons-radius: 10px;
+    --buttons-border-width: 0px;
+    --buttons-shadow-opacity: 0.0;
+    --buttons-shadow-horizontal-offset: 0px;
+    --buttons-shadow-vertical-offset: 0px;
+    --buttons-shadow-blur-radius: 0px;
+    --buttons-border-offset: 0.3px;
+
+    --badge-corner-radius: 4.0rem;
+
+    --product-card-image-padding: 0.0rem;
+    --product-card-corner-radius: 0.0rem;
+    --product-card-border-width: 0.0rem;
+    --product-card-border-opacity: 0.0;
+    --product-card-shadow-opacity: 0.1;
+    --product-card-shadow-visible: 1;
+    --product-card-shadow-horizontal-offset: 0.0rem;
+    --product-card-shadow-vertical-offset: 0.0rem;
+    --product-card-shadow-blur-radius: 0.0rem;
+
+    --collection-card-image-padding: 0.0rem;
+    --collection-card-corner-radius: 0.0rem;
+    --collection-card-border-width: 0.0rem;
+    --collection-card-border-opacity: 0.0;
+    --collection-card-shadow-opacity: 0.1;
+    --collection-card-shadow-visible: 1;
+    --collection-card-shadow-horizontal-offset: 0.0rem;
+    --collection-card-shadow-vertical-offset: 0.0rem;
+    --collection-card-shadow-blur-radius: 0.0rem;
+
+    --blog-card-image-padding: 0.0rem;
+    --blog-card-corner-radius: 0.0rem;
+    --blog-card-border-width: 0.0rem;
+    --blog-card-border-opacity: 0.0;
+    --blog-card-shadow-opacity: 0.1;
+    --blog-card-shadow-visible: 1;
+    --blog-card-shadow-horizontal-offset: 0.0rem;
+    --blog-card-shadow-vertical-offset: 0.0rem;
+    --blog-card-shadow-blur-radius: 0.0rem;
+
+    --text-boxes-border-opacity: 0.0;
+    --text-boxes-border-width: 0px;
+    --text-boxes-radius: 0px;
+    --text-boxes-shadow-opacity: 0.0;
+    --text-boxes-shadow-visible: 0;
+    --text-boxes-shadow-horizontal-offset: 0px;
+    --text-boxes-shadow-vertical-offset: 0px;
+    --text-boxes-shadow-blur-radius: 0px;
+
+    --product-page-media-border-opacity: 1.0;
+    --product-page-media-border-width: 0px;
+    --product-page-media-radius: 20px;
+
+    --media-padding: px;
+    --media-border-opacity: 0.0;
+    --media-border-width: 0px;
+    --media-radius: 0px;
+    --media-shadow-opacity: 0.0;
+    --media-shadow-horizontal-offset: 0px;
+    --media-shadow-vertical-offset: 0px;
+    --media-shadow-blur-radius: 0px;
+    --media-shadow-visible: 0;
+
+    --grid-layout-gap: 24px;
+    --grid-column-count: 5;
+    --grid-item--min-width: 260px;
+}

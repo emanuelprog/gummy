@@ -1,0 +1,99 @@
+<div id="header"
+     class="ds-bg-white bg-no-repeat bg-contain bg-top lg:bg-center ds-color-black top-0 z-40 w-full ease-in-out flex">
+    <style>
+        #header {
+            --spacing-margin-top: 0px;
+            --spacing-margin-bottom: 0px;
+            --spacing-padding-top: 0px;
+            --spacing-padding-bottom: 0px;
+        }
+    </style>
+    <div aria-labelledby="slide-over-title" role="dialog" aria-modal="true" class="relative z-30" [ngStyle]="{ 'display': menuDisplay }">
+        <div class="fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity duration-500 sm:duration-700"></div>
+        <div class="overflow-hidden fixed inset-0">
+            <div class="overflow-hidden absolute inset-0">
+                <div class="flex fixed inset-y-0 max-w-full pointer-events-none xs:pr-10">
+                    <div class="w-screen max-w-xs transition-all duration-500 pointer-events-auto sm:duration-700">
+                        <div class="overflow-y-scroll relative h-full bg-white shadow-xl">
+                            <div class="flex p-4">
+                                <button type="button"
+                                        class="inline-flex justify-center items-center p-2 -m-2 text-gray-400 rounded-md" (click)="toggleMenu()">
+                                    <span class="sr-only">Fechar menu</span>
+                                    <svg class="w-6 h-6" aria-hidden="true" focusable="false" role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex flex-col py-6 px-4 pt-2 space-y-6 text-black">
+                                <a [routerLink]="['/collections', colecao?.slug]" target="_self" *ngFor="let colecao of colecoes" (click)="toggleMenu()">
+                                    <span class="ds-heading-font ">{{ colecao?.nome }}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-color-black ds-bg-white z-10 w-screen max-w-[-webkit-fill-available]">
+        <div class="ds-page-container">
+            <div class="flex justify-between items-center py-3">
+                <div class="flex items-center space-x-2 lg:hidden basis-1/3 lg:basis-auto">
+                    <!-- Menu -->
+                    <button class="flex items-center p-1 transition-transform hover:scale-110 hover:translate-x-0" (click)="toggleMenu()">
+                        <svg class="ds-color-black" aria-hidden="true" focusable="false" role="presentation"
+                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="1.5"
+                             stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"></path>
+                        </svg>
+                    </button>
+                    <!-- Search Mobile -->
+                    <a class="p-1 transition-transform hover:scale-110 hover:translate-x-0">
+                        <svg class="ds-color-black" aria-hidden="true" focusable="false" role="presentation"
+                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="1.5"
+                             stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="flex justify-center basis-1/3 lg:order-first lg:basis-auto">
+                    <a href="/" class="inline-block">
+                        <img ngSrc="https://www.gummyhair.com.br/cdn/shop/files/MicrosoftTeams-image_3_f04bbbf8-f2a2-440e-865b-b89b8a7c2061.png?v=1697051265&width=500"
+                             alt="Gummy Hair"
+                             width="2000" height="473" loading="lazy">
+                    </a>
+                </div>
+                <div class="flex items-center justify-end space-x-2 basis-1/3 lg:basis-auto"><!-- Search Desktop -->
+                    <!-- Account -->
+                    <a href="#" class="p-1 transition-transform hover:scale-110 hover:translate-x-0">
+                        <svg class="ds-color-black" aria-hidden="true" focusable="false" role="presentation"
+                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="1.5"
+                             stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"></path>
+                        </svg>
+                    </a>
+                    <div class="relative mr-2">
+                        <button class="flex items-center p-1 transition-transform hover:scale-110 hover:translate-x-0">
+                            <svg class="" aria-hidden="true" focusable="false" role="presentation"
+                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                 stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
+                            </svg>
+                            <span class="absolute rounded px-[3px] py-[1px] top-[1px] font-black text-xxs ds-color-white right-[1px] ds-bg-black"
+                                  style="display: none;">0</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

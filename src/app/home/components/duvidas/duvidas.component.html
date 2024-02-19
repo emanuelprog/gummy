@@ -1,0 +1,1052 @@
+<section id="shopify-section-template--15602560893060__29889842-d0bb-49b7-9713-ae441175774a" class="shopify-section">
+    <div id="template--15602560893060__29889842-d0bb-49b7-9713-ae441175774a"
+         class="ds-bg-transparent bg-no-repeat bg-contain bg-top lg:bg-center ds-color-default ">
+        <div class="w-full gap-4 flex flex-col items-center justify-center ds-page-container ds-align-center ds-container-lg">
+            <div class="w-full">
+                <div class="ds-align-center">
+                    <h2 class="ds-text-6 ds-format-tags  ds-font-accent ds-color-accent-1  ds-text-">
+                        <p>PERGUNTAS FREQUENTES</p>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="shopify-section-template--15602560893060__3512b886-6b92-42d1-b57a-6a52777e755a" class="shopify-section">
+    <style>
+        #template--15602560893060__3512b886-6b92-42d1-b57a-6a52777e755a {
+            --spacing-margin-top: 0px;
+            --spacing-margin-bottom: 0px;
+            --spacing-padding-top: 0px;
+            --spacing-padding-bottom: 0px;
+        }
+    </style>
+
+    <div id="template--15602560893060__3512b886-6b92-42d1-b57a-6a52777e755a"
+         class="ds-bg-1 bg-no-repeat bg-contain bg-top lg:bg-center ds-color-white ds-tab-group-FAQ ">
+        <div class="ds-page-container-full ">
+            <div class="flex overflow-x-auto ds-bg-1 ds-scrollbar-hidden" aria-label="Tabs">
+                <button *ngFor="let tab of tabs; let i = index"
+                        class="flex-1 px-3 py-6 text-sm text-center whitespace-nowrap"
+                        [class]="tab.colorClass + ' ' + (currentTabIndex === i ? 'font-black ds-border-b-3 ds-color-white' : 'font-bold ds-color-white hover:text-gray-300 hover:border-gray-300 hover:font-bold hover:ds-border-b-3')"
+                        (click)="changeTab(i)">
+                    <p>{{ tab.name }}</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="shopify-section-template--15602560893060__b557b3a8-af3d-4f12-a90a-a49db660634b" class="shopify-section">
+    <div [ngClass]="{'hidden': currentTabIndex !== 0}"
+         id="template--15602560893060__b557b3a8-af3d-4f12-a90a-a49db660634b"
+         class="ds-bg-gradient-1 bg-no-repeat bg-contain bg-top lg:bg-center ds-color-accent-10 ds-tab ds-tab-1 ds-tab-group-FAQ">
+        <div class="ds-page-container  ">
+            <div class="ds-align-center">
+                <h2 class="ds-text-5 ds-format-tags  ds-font-accent ds-color-black  ds-text-">
+                    <p>GUMMY HAIR</p>
+                </h2>
+            </div>
+
+            <div class="flex grow justify-between items-center md:gap-20 flex-col md:flex-row">
+                <div class="flex-1 w-full">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p>O que é Gummy Hair?</p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>GummyHair é a primeira goma em formato de coração do mundo. É rica em vitaminas e
+                                    minerais que auxiliam na manutenção dos seus cabelos.</p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p>O que tem dentro do Gummy Hair?</p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O GummyHair é feito à base de pectina vegetal e não contém gelatina ou outros
+                                    ingredientes de origem animal. As gominhas possuem 11 tipos de vitaminas e minerais,
+                                    são elas: Vitamina A, Vitamina D2, Vitamina E,&nbsp; Vitamina C, Vitamina K,
+                                    Vitamina B5, Vitamina B6, Biotina, Vitamina B9, Cromo, Iodo, Zinco.</p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p>Quantas gomas posso ingerir?</p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>É recomendado o consumo de duas gominhas por dia e o horário fica ao seu
+                                    critério.</p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="flex flex-col py-4 border-b-2" id="">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p>Em quanto tempo posso melhorias?</p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>As melhorias podem variar de acordo com o estilo de vida, alimentação e metabolismo
+                                    de cada pessoa.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="flex-1 w-full" id="column-2">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p>Quem pode tomar Gummy Hair?</p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>É recomendado para maiores de 19 anos. Gestantes e nutrizes somente devem consumir
+                                    sob orientação do médico ou nutricionista.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p>O Gummy Hair engorda?</p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Apesar de conter uma pequena quantidade de açúcar na composição, possui apenas 21
+                                    calorias em sua dose diária de duas gominhas.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p>O Gummy Hair funciona para todos os tipos de cabelo?</p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Sim! O GummyHair foi formulado para oferecer benefícios para todos os tipos de
+                                    cabelos.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p>O Gummy Hair possui contraindicação?</p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O Gummy não possui efeitos colaterais, porém, se você tiver menor 19 anos, estiver
+                                    grávida ou possuir algum problema de saúde, nós recomendamos que um nutricionista
+                                    seja consultado.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div [ngClass]="{'hidden': currentTabIndex !== 1}"
+         id="template--15602560893060__446f9c6b-372f-4791-abe8-0ebce7cfd1ea"
+         class="ds-bg-gradient-1 bg-no-repeat bg-contain bg-top lg:bg-center ds-color-accent-10 ds-tab ds-tab-2 ds-tab-group-FAQ">
+        <div class="ds-page-container  ">
+            <div class="ds-align-center">
+                <h2 class="ds-text-5 ds-format-tags  ds-font-accent ds-color-black  ds-text-">
+                    <p>GUMMY NIGHT</p>
+                </h2>
+            </div>
+
+            <div class="flex grow justify-between items-center md:gap-20 flex-col md:flex-row">
+                <div class="flex-1 w-full">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>O que é Gummy Night?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Gummy Night é um suplemento alimentar em formato de coração enriquecido com
+                                    melatonina que vai te auxiliar a ter uma melhor noite de sono.&nbsp;</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Como devo tomar Gummy Night?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>A recomendação de uso é 01 gominha por dia 1h antes de dormir, preferencialmente no
+                                    período da noite.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Quem pode tomar Gummy Night?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Gummy Night é recomendado para maiores de 19 anos.&nbsp;</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Gummy Night possui alguma contraindicação?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Gummy Night não deve ser consumido por gestantes, lactantes, crianças e pessoas
+                                    envolvidas em atividades que requerem atenção constante.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Em quanto tempo posso ver melhorias?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O tempo para que o Gummy Night comece a agir pode variar de acordo com a resposta de
+                                    cada organismo.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Gummy Night possui alguma contraindicação?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Gummy Night não deve ser consumido por gestantes, lactantes, crianças e pessoas
+                                    envolvidas em atividades que requerem atenção constante.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Em quanto tempo posso ver melhorias?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O tempo para que o Gummy Night comece a agir pode variar de acordo com a resposta de
+                                    cada organismo.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div [ngClass]="{'hidden': currentTabIndex !== 2}"
+         id="template--15602560893060__4b89c8d1-4cbb-427c-abbf-6bd37febf8b6"
+         class="ds-bg-gradient-1 bg-no-repeat bg-contain bg-top lg:bg-center ds-color-accent-10 ds-tab ds-tab-3 ds-tab-group-FAQ">
+        <div class="ds-page-container">
+            <div class="ds-align-center">
+                <h2 class="ds-text-5 ds-format-tags  ds-font-accent ds-color-black  ds-text-">
+                    <p>GUMMY KIDS</p>
+                </h2>
+            </div>
+            <div class="flex grow justify-between items-center md:gap-20 flex-col md:flex-row">
+                <div class="flex-1 w-full">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>O que é Gummy Kids?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"><path
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path></svg>
+                                  </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Gominhas de vitaminas que auxiliam no crescimento saudável das crianças. Além de
+                                    ajudar no fortalecimento dos ossos e da imunidade.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Do que é feito Gummy Kids?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"><path
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path></svg>
+                                  </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O Gummy Kids é feito à base das vitaminas A, D2, E, C, B5, Biotina, B6, B9 e B12, nas
+                                    quantidades ideais para auxiliar no crescimento saudável das crianças.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Quantas gominhas os pequenos podem consumir?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"><path
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path></svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>É recomendado o consumo de duas gominhas por dia e o horário fica ao seu critério</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Quem pode tomar Gummy Kids?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                     role="presentation" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"><path
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path></svg>
+                            </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Crianças a partir de 4 anos já podem consumir o Gummy Kids</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Gummy Kids possui contraindicação?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                              </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O Gummy Kids não possui efeitos colaterais, mas, se a criança tiver menos de 4 anos
+                                    ou possuir algum problema de saúde, recomendo que consulte um nutricionista</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Qual o sabor das gominhas de Gummy Kids?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>As gominhas possuem sabores de frutas como: laranja, morango, maçã verde, abacaxi e
+                                    blueberry.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div [ngClass]="{'hidden': currentTabIndex !== 3}"
+         id="template--15602560893060__a6541fe2-eeb0-446b-aabb-9b3fd76589b2"
+         class="ds-bg-gradient-1 bg-no-repeat bg-contain bg-top lg:bg-center ds-color-accent-10 ds-tab ds-tab-4 ds-tab-group-FAQ">
+        <div class="ds-page-container">
+            <div class="ds-align-center">
+                <h2 class="ds-text-5 ds-format-tags  ds-font-accent ds-color-black  ds-text-">
+                    <p>GUMMY SKIN</p>
+                </h2>
+            </div>
+            <div class="flex grow justify-between items-center md:gap-20 flex-col md:flex-row">
+                <div class="flex-1 w-full">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>O que é o Gummy Skin?&nbsp;</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O Gummy Skin Vitamin é um suplemento alimentar produzido com 50 mg de ácido
+                                    hialurônico.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Quantas gominhas de Gummy Skin devo consumir por dia? </strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Recomendamos o consumo diário de apenas 1 gominha de Gummy Skin</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Em quanto tempo posso esperar melhorias visíveis com o Gummy
+                                            Skin?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"><path
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path></svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>As melhorias podem variar de acordo com o estilo de vida, alimentação e metabolismo
+                                    de cada pessoa.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>O Gummy Skin possui algum efeito colateral?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O Gummy Skin não possui efeitos colaterais. No entanto, recomendamos que mulheres
+                                    grávidas, lactantes e pessoas com condições médicas pré-existentes consultem um
+                                    profissional de saúde antes de iniciar ouso.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Como devo consumir o Gummy Skin?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                     role="presentation" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg>
+                            </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Recomendamos consumir 1 gominha por dia.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div [ngClass]="{'hidden': currentTabIndex !== 4}"
+         id="template--15602560893060__a968f9d8-b219-4003-8e92-1406a046e8dc"
+         class="ds-bg-gradient-1 bg-no-repeat bg-contain bg-top lg:bg-center ds-color-accent-10 ds-tab ds-tab-5 ds-tab-group-FAQ">
+        <div class="ds-page-container">
+            <div class="ds-align-center">
+                <h2 class="ds-text-5 ds-format-tags  ds-font-accent ds-color-black  ds-text-">
+                    <p>GUMMY FOR MEN</p>
+                </h2>
+            </div>
+
+            <div class="flex grow justify-between items-center md:gap-20 flex-col md:flex-row">
+                <div class="flex-1 w-full">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>O que é Gummy For Men?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Gummy For Men é um suplemento vitamínico em formato de gomas com sabor blueberry
+                                    desenvolvido para homens. Ele auxilia no crescimento e na nutrição dos fios,
+                                    contribui para o volume da barba e ajuda a fortalecer a imunidade.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>O que tem na fórmula do Gummy For Men?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O Gummy For Men é feito à base de pectina vegetal e não contém gelatina ou outros
+                                    ingredientes de origem animal. As gomas possuem 11 tipos de vitaminas e minerais,
+                                    são elas: Vitamina A, Vitamina D2, Vitamina E, Vitamina C, Vitamina K, Vitamina B5,
+                                    Vitamina B6, Biotina, Vitamina B9, Cromo, Iodo, Zinco</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Em quanto tempo já posso ver os resultados?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>Os resultados do produto variam de acordo com o estilo de vida, alimentação e
+                                    metabolismo de cada indivíduo.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Quem pode tomar Gummy For Men?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O Gummy For Men pode ser utilizado por todos que desejam dar um up no visual. A
+                                    recomendação de uso é para maiores de 19 anos.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Como devo tomar Gummy For Men?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>A recomendação de uso é de 02 (duas) gomas por dia, no horário desejado.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div [ngClass]="{'hidden': currentTabIndex !== 5}"
+         id="template--15602560893060__d27af85d-1237-44d5-98ed-1dc6688e669b"
+         class="ds-bg-gradient-1 bg-no-repeat bg-contain bg-top lg:bg-center ds-color-accent-10 ds-tab ds-tab-6 ds-tab-group-FAQ">
+        <div class="ds-page-container  ">
+            <div class="ds-align-center">
+                <h2 class="ds-text-5 ds-format-tags  ds-font-accent ds-color-black  ds-text-">
+                    <p>GUMMY VITAMINA C</p>
+                </h2>
+            </div>
+            <div class="flex grow justify-between items-center md:gap-20 flex-col md:flex-row">
+                <div class="flex-1 w-full">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>O que é o Gummy Vitamina C?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O Gummy Vitamina C é um suplemento em formato de coração criado para auxiliar no
+                                    reforço imunológico.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Como devo consumir o Gummy Vitamina C?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>É recomendado que você consuma 1 gominha por dia.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Lactantes e gestantes podem usar?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O Gummy Vitamina C não possui efeitos colaterais, mas recomendamos que você consulte
+                                    o seu médico de confiança para solicitar orientação quanto ao uso.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Quem pode tomar o Gummy Vitamina C?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O Gummy Vitamina C é recomendado para pessoas a partir dos 11 anos de idade.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Gummy Vitamina C causar alergia?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>O Gummy Vitamina C não possui efeitos colaterais, pois é um suplemento vitamínico
+                                    feito a base de pectina vegetal e vegano.</p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="flex flex-col py-4 border-b-2" id="even">
+                        <details class="ds-input-border-1 h-fit">
+                            <summary class="flex justify-between list-none cursor-pointer ds-details-marker-hidden">
+                                <div class="flex gap-4 items-center ">
+                                    <h3 class="font-bold ds-color-black">
+                                        <p><strong>Em quanto tempo posso ver as melhorias?</strong></p>
+                                    </h3>
+                                </div>
+                                <span class="flex items-center">
+                                    <svg class="h-6 w-6 ds-color-text" aria-hidden="true" focusable="false"
+                                         role="presentation"
+                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                         stroke-width="1.5"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="my-2 text-sm ds-color-text">
+                                <p>As melhorias podem variar de acordo com o estilo de vida, alimentação e metabolismo
+                                    de cada pessoa.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
