@@ -13,8 +13,8 @@
       <div class="px-4 mb-16 text-center ds-container-lg">
         <div>
           <div class="ds-align-center">
-            <h2 class="ds-text-6 ds-format-tags ds-font-accent ds-color-accent-1 ds-text-">
-              Cabelo, Pele e Unhas
+            <h2 class="ds-text-6 ds-format-tags ds-font-accent ds-color-accent-1 ds-text-" >
+              {{colecao.nome}}
             </h2>
           </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="relative lg:col-span-3" id="productDiv">
                 <div>
                     <ul id="products-container" class="auto-cols-auto ds-grid-container">
-                          <li class="inline-flex flex-col" *ngFor="let produto of produtos">
+                          <li class="inline-flex flex-col" *ngFor="let produto of produtos" [routerLink]="['/product', produto.slug]">
                               <div
                               class="flex flex-col h-full ds-bg-transparent ds-product-card group">
                                   <div class="relative grow">

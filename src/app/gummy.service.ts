@@ -19,7 +19,20 @@ export class GummyService {
     );
   }
 
-  getProdutos(): Observable<any[]> {
-    return this.http.get<any[]>('/assets/produtos.json');
+  getProdutos(colecao?: string): Observable<any[]> {
+    return this.http.get<any[]>('/assets/produtos.json').pipe(
+      map(produtos =>
+        colecao ? produtos.filter(produto =>
+          produto.collections.includes(colecao))
+          : produtos
+      )
+    );
+  }
+
+  getImagensProdutos(): Observable<any[]> {
+    return this.http.get<any[]>('/assets/imagens-produtos.json');
+  }
+  getThumbnailsImagensProdutos(): Observable<any[]> {
+    return this.http.get<any[]>('/assets/imagens-produtos-thumb.json');
   }
 }

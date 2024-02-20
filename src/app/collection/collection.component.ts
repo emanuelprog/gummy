@@ -20,6 +20,7 @@ import { CommonModule } from '@angular/common';
 })
 export class CollectionComponent {
   colecao: any;
+  produtos: any[] = [];
 
   constructor(
       private route: ActivatedRoute,
@@ -33,6 +34,11 @@ export class CollectionComponent {
       if (productType) {
         this.gummyService.getColecao(productType).subscribe(data => {
           this.colecao = data;
+        });
+        console.log(productType);
+        
+        this.gummyService.getProdutos(productType).subscribe(dados => {
+          this.produtos = dados;
         });
       }
     });

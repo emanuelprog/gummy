@@ -1,5 +1,6 @@
 [
     {
+      "slug":"cabelo-pele-e-unhas",
       "alt": "2 Gummy Hair",
       "promo": "20% OFF",
       "nome": "2 Gummy Hair",
@@ -12,9 +13,13 @@
         {"nome": "Morango", "link": null},
         {"nome": "Maçã Verde", "link": null},
         {"nome": "Melancia", "link": null}
+      ],
+      "collections": [
+        "cabelo-pele-e-unhas"
       ]
     },
     {
+      "slug":"cabelo-pele-e-unhas",
       "alt": "3 Gummy Hair",
       "promo": "20% OFF",
       "nome": "3 Gummy Hair",
@@ -28,6 +33,9 @@
         {"nome": "Maçã Verde", "link": null},
         {"nome": "Melancia", "link": null},
         {"nome": "Mix de Sabores", "link": null}
+      ],
+      "collections": [
+        "cabelo-pele-e-unhas"
       ]
     }
   ]

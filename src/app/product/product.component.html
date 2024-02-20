@@ -1,1 +1,807 @@
-<p>product works!</p>
+<app-breadcrumb [colecao]="colecao"></app-breadcrumb>
+<section
+  id="shopify-section-template--15602561220740__main"
+  class="shopify-section section"
+>
+  <style>
+    .product-grid {
+      grid-template-areas:
+        "product"
+        "info-1"
+        "info-2";
+    }
+
+    @media only screen and (min-width: 760px) {
+      .product-grid {
+        grid-template-areas:
+          "product info-1"
+          "info-2  info-1";
+
+        grid-template-columns: 50% 50%;
+        grid-template-rows: min-content 1fr;
+      }
+    }
+    @media only screen and (min-width: 1920px) {
+      .product-grid {
+        grid-template-columns: 60% 40%;
+      }
+    }
+
+    .grid-area-product {
+      grid-area: product;
+    }
+
+    .grid-area-info-1 {
+      grid-area: info-1;
+    }
+
+    .grid-area-info-2 {
+      grid-area: info-2;
+    }
+  </style>
+  <div
+    id="template--15602560532612__main"
+    class="ds-bg-transparent bg-no-repeat bg-contain bg-top lg:bg-center"
+  >
+    <div class="grid relative product-grid ds-page-container-full">
+      <div x-data="{ lightbox: false, imgModalSrc : '', imgModalAlt : ''}">
+        <div x-show="lightbox" style="display: none">
+          <div
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-90"
+            class="flex overflow-hidden fixed inset-0 z-50 justify-center items-center p-2 w-full bg-black bg-opacity-75 h-100"
+          >
+            <div>
+              <div class="m-auto w-full md:w-2/3">
+                <button class="pb-4 outline-none">
+                  <svg
+                    class="fill-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                  >
+                    <path
+                      d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"
+                    ></path>
+                  </svg>
+                </button>
+                <img
+                  class="overflow-hidden rounded-2xl"
+                  :src="imgModalSrc"
+                  :alt="imgModalAlt"
+                  loading="lazy"
+                  src=""
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="overflow-hidden relative md:flex md:flex-col grid-area-product h-fit"
+      >
+        <div class>
+          <ngx-slick-carousel
+            class="flex overflow-x-auto md:overflow-x-hidden md:m-0 ds-scrollbar-hidden snap-x snap-mandatory md:scroll-px-0"
+            #slickModal="slick-carousel"
+            [config]="slideConfig"
+          >
+            <div
+              ngxSlickItem
+              class="flex-container align-center"
+              *ngFor="let imagem of imagens"
+            >
+              <span style="cursor: pointer" id="image-variant">
+                <a class="cursor-zoom-in">
+                  <img
+                    src="{{ imagem.imagem }}"
+                    alt="2 Gummy Hair"
+                    width="1000"
+                    height="1000"
+                    class="ds-image-emphasis"
+                  />
+                </a>
+              </span>
+            </div>
+          </ngx-slick-carousel>
+        </div>
+        <div class>
+          <div
+            class="flex overflow-auto relative z-10 gap-2 mb-4 ml-2 -mt-8 md:absolute md:left-2 md:top-4 md:flex-col md:mt-0"
+          >
+            <span
+              id="image-variant-thumbnail"
+              class="overflow-hidden w-14 h-14 bg-gray-100 rounded-full border-2 ds-border-white shrink-0 border-4"
+              *ngFor="let thumb of thumbnails"
+            >
+              <img
+                src="{{ thumb.imagem }}"
+                alt="2 Gummy Hair"
+                width="100"
+                height="100"
+                loading="lazy"
+                class="object-cover w-full h-full"
+              />
+            </span>
+          </div>
+        </div>
+        <div
+          class="flex overflow-hidden flex-col pr-4 pl-4 w-full md:pl-16 grid-area-info-1 gap-6 my-6"
+          id="product-info"
+        >
+          <a href="/pages/prazo-de-entrega" class="block group ds-text-1">
+            <div
+              x-data="countdown()"
+              x-init="start()"
+              x-show="distance > 0"
+              style="padding: 1px 0px; display: none"
+              class="flex flex-col lg:flex-row items-center rounded justify-center space-x-2 px-2 py-3 ds-bg-4 ds-color-accent-8"
+            >
+              <div
+                class="flex flex-row justify-center items-center mt-2 lg:mt-0"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4 mr-1 font-bold"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <div class="inline-block leading-7">
+                  <p>Frete Grátis</p>
+                </div>
+              </div>
+              <div class="flex flex-row justify-center items-center font-black">
+                <div
+                  x-show="days != '00'"
+                  class="flex flex-row gap-0.5 items-end mx-1"
+                >
+                  <span x-text="days">28</span>
+                  <span>d</span>
+                </div>
+                <div class="flex flex-row gap-0.5 items-end mx-1">
+                  <span x-text="hours">22</span>
+                  <span>h</span>
+                </div>
+                <div>:</div>
+                <div class="flex flex-row gap-0.5 items-end mx-1">
+                  <span x-text="minutes">58</span>
+                  <span>m</span>
+                </div>
+                <div>:</div>
+                <div class="flex flex-row gap-0.5 items-end mx-1">
+                  <span x-text="seconds">60</span>
+                  <span>s</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <script type="text/javascript">
+            function countdown() {
+              return {
+                seconds: "00",
+                minutes: "00",
+                hours: "00",
+                days: "00",
+                distance: 0,
+                countdown: null,
+                countdownTime: new Date("2023-03-28 23:59:00").getTime(),
+                now: new Date().getTime(),
+                start: function () {
+                  this.countdown = setInterval(() => {
+                    // Calculate time
+                    this.now = new Date().getTime();
+                    this.distance = this.countdownTime - this.now;
+                    // Set Times
+                    this.days = this.parseNumberTwoDigits(
+                      Math.floor(this.distance / (1000 * 60 * 60 * 24))
+                    );
+                    this.hours = this.parseNumberTwoDigits(
+                      Math.floor(
+                        (this.distance % (1000 * 60 * 60 * 24)) /
+                          (1000 * 60 * 60)
+                      )
+                    );
+                    this.minutes = this.parseNumberTwoDigits(
+                      Math.floor(
+                        (this.distance % (1000 * 60 * 60)) / (1000 * 60)
+                      )
+                    );
+                    this.seconds = this.parseNumberTwoDigits(
+                      Math.floor((this.distance % (1000 * 60)) / 1000)
+                    );
+                    // Stop
+                    if (this.distance < 0) {
+                      clearInterval(this.countdown);
+                    }
+                  }, 100);
+                },
+                parseNumberTwoDigits: function (num) {
+                  return ("00" + num).slice(-2);
+                },
+              };
+            }
+          </script>
+          <div>
+            <h1
+              class="text-3xl font-bold ds-font-accent ds-text-5 ds-color-text"
+            >
+              2 Gummy Hair
+            </h1>
+            <a href="/products/02-gummy-hair-vitamin" class="hidden">
+              <h2>2 Gummy Hair</h2>
+            </a>
+          </div>
+          <div id="price">
+            <span
+              style="font-size: 24px"
+              class="flex gap-4 items-end ds-color-accent-1"
+            >
+              <div style="font-size: 24px" class="font-black">
+                <s class="text-sm font-medium text-gray-500">R$ 298,00</s>
+                R$ 239,00
+              </div>
+              <div
+                class="py-1 px-2 text-base text-white whitespace-nowrap bg-red-400 rounded-md h-fit grow-0"
+              >
+                19% OFF
+              </div>
+            </span>
+          </div>
+          <div
+            class="flex flex-col gap-6"
+            x-init="$watch('selectedOptions', () => updateVariant())"
+          >
+            <div class="flex flex-col gap-4">
+              <legend class="text-sm">Escolha o Sabor::</legend>
+              <div class="flex flex-wrap gap-2">
+                <span>
+                  <input
+                    type="radio"
+                    id="template--15602561220740__main-1-0"
+                    name="Escolha o Sabor:"
+                    value="Tutti-Frutti"
+                    class="hidden peer"
+                  />
+                  <label
+                    class="ds-color-accent-1 ds-border-accent-1 ds-bg-white cursor-pointer ds-pills ds-peer-checked-border-accent-1 ds-peer-checked-bg-accent-1 ds-peer-checked-color-white inline-block items-center gap-1 py-1 px-2 rounded-lg border-[1px]"
+                    for="template--15602561220740__main-1-0"
+                  >
+                    <div
+                      class="inline-block w-3 h-3 align-middle rounded-full"
+                      style="background-color: #ff80b5"
+                    >
+                      &nbsp;
+                    </div>
+                    Tutti-Frutti
+                  </label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    id="template--15602561220740__main-1-1"
+                    name="Escolha o Sabor:"
+                    value="Morango"
+                    class="hidden peer"
+                  />
+                  <label
+                    class="ds-color-accent-1 ds-border-accent-1 ds-bg-white cursor-pointer ds-pills ds-peer-checked-border-accent-1 ds-peer-checked-bg-accent-1 ds-peer-checked-color-white inline-block items-center gap-1 py-1 px-2 rounded-lg border-[1px]"
+                    for="template--15602561220740__main-1-1"
+                  >
+                    <div
+                      class="inline-block w-3 h-3 align-middle rounded-full"
+                      style="background-color: #d8323d"
+                    >
+                      &nbsp;
+                    </div>
+                    Morango
+                  </label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    id="template--15602561220740__main-1-2"
+                    name="Escolha o Sabor:"
+                    value="Maçã Verde"
+                    class="hidden peer"
+                  />
+                  <label
+                    class="ds-color-accent-1 ds-border-accent-1 ds-bg-white cursor-pointer ds-pills ds-peer-checked-border-accent-1 ds-peer-checked-bg-accent-1 ds-peer-checked-color-white inline-block items-center gap-1 py-1 px-2 rounded-lg border-[1px]"
+                    for="template--15602561220740__main-1-2"
+                  >
+                    <div
+                      class="inline-block w-3 h-3 align-middle rounded-full"
+                      style="background-color: #00f5a4"
+                    >
+                      &nbsp;
+                    </div>
+                    Maçã Verde
+                  </label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    id="template--15602561220740__main-1-3"
+                    name="Escolha o Sabor:"
+                    value="Melancia"
+                    class="hidden peer"
+                  />
+                  <label
+                    class="ds-color-accent-1 ds-border-accent-1 ds-bg-white cursor-pointer ds-pills ds-peer-checked-border-accent-1 ds-peer-checked-bg-accent-1 ds-peer-checked-color-white inline-block items-center gap-1 py-1 px-2 rounded-lg border-[1px]"
+                    for="template--15602561220740__main-1-3"
+                  >
+                    <div
+                      class="inline-block w-3 h-3 align-middle rounded-full"
+                      style="background-color: #ff563a"
+                    >
+                      &nbsp;
+                    </div>
+                    Melancia
+                  </label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <form
+              id="product_form_7112572141700"
+              class="form flex flex-col gap-4 lg:flex-row"
+            >
+              <input type="hidden" name="form_type" value="product" />
+              <input type="hidden" name="utf8" value="✓" />
+              <input
+                type="hidden"
+                name="items[0][id]"
+                x-model="currentVariant.id"
+                value="41425142186116"
+              />
+              <input
+                type="hidden"
+                name="items[0][quantity]"
+                x-model="qty"
+                value="1"
+              />
+              <div class="flex flex-col w-full">
+                <button
+                  type="button"
+                  name="add"
+                  class="flex justify-center items-center p-4 w-full font-bold text-white uppercase bg-blue-300 rounded-md border border-transparent shadow lg:w-full hover:brightness-110 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-400 focus:outline-none disabled:bg-gray-300 brightness-100 ds-btn ds-btn-text-1 ds-btn-border-1 ds-btn-gradient-2"
+                >
+                  <div style="display: none">
+                    <svg
+                      class="inline-block w-5 h-5 text-white animate-spin"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        class="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="4"
+                      ></circle>
+                      <path
+                        class="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span x-show="!loading">
+                    <span
+                      class="lg:whitespace-nowrap"
+                      x-show="currentVariant.available"
+                      x-text="` Comprar Agora`"
+                    >
+                      Comprar Agora</span
+                    >
+                    <span
+                      x-show="!currentVariant.available"
+                      style="display: none"
+                      >Esgotado</span
+                    >
+                  </span>
+                </button>
+              </div>
+              <input type="hidden" name="product-id" value="7112572141700" />
+              <input
+                type="hidden"
+                name="section-id"
+                value="template--15602561220740__main"
+              />
+            </form>
+            <form action="/cart" method="post"></form>
+            <div
+              class="flex gap-2 justify-center items-center text-sm text-gray-500"
+            >
+              <svg
+                class="pr-1 ds-color-"
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                xmlns="http://www.w3.org/2000/svg"
+                width="1.4em"
+                height="1.4em"
+                fill="none"
+                stroke-width="1.5"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
+                ></path>
+              </svg>
+              <p>Garantia de 28 dias ou seu dinheiro de volta</p>
+            </div>
+          </div>
+          <div class="prose ds-format-tags">
+            <meta charset="utf-8" />
+            <p class="p1" data-mce-fragment="1">
+              <b data-mce-fragment="1">GUMMY HAIR<br data-mce-fragment="1" /></b
+              >Gummy&nbsp;é a&nbsp;primeira vitamina em formato de coração do
+              mundo.&nbsp;Com uma fórmula exclusiva, as gominhas contêm
+              componentes que contribuem para a&nbsp;nutrição, crescimento e
+              fortalecimento dos cabelos e unhas.&nbsp;Além disso, auxiliam na
+              saúde da pele e&nbsp;fortalecem o sistema imunológico.
+            </p>
+            <p class="p1" data-mce-fragment="1">
+              &nbsp;<b data-mce-fragment="1">BENEFÍCIOS</b>
+            </p>
+            <ul class="ul1" data-mce-fragment="1">
+              <li class="li1" data-mce-fragment="1">
+                <span class="s1" data-mce-fragment="1"></span>Auxilia a
+                manutenção dos&nbsp;cabelos&nbsp;&nbsp;e&nbsp;da pele
+              </li>
+              <li class="li1" data-mce-fragment="1">
+                <span class="s1" data-mce-fragment="1"></span>Contribui no
+                funcionamento do sistema imune
+              </li>
+              <li class="li1" data-mce-fragment="1">
+                <span class="s1" data-mce-fragment="1"></span>Fórmula com
+                biotina, vitamina A,&nbsp;D2, E, C, K, vitaminas do complexo B,
+                cromo, iodo e zinco.<br data-mce-fragment="1" /><br />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="info-2" class="flex flex-col gap-6 my-6 grid-area-info-2">
+          <div
+            style="gap: 24px"
+            class="max-w-[calc(100vw-2rem)] flex w-full overflow-x-scroll overflow-y-hidden md:overflow-visible ds-scrollbar-hidden md:flex-wrap gap-8 md:justify-center [&amp;>*:first-child]:ml-auto [&amp;>*:last-child]:mr-auto md:[&amp;>*:first-child]:mx-0 md:[&amp;>*:last-child]:mx-0 first:mt-0"
+          >
+            <div
+              class="flex flex-col gap-2 justify-start items-center md:ds-width-1 text-center"
+            >
+              <div>
+                <img
+                  src="//www.gummyhair.com.br/cdn/shop/collections/Group_20008.png?height=40&amp;v=1664844859"
+                  alt="Benefícios - Delicious Flavor"
+                  srcset="
+                    //www.gummyhair.com.br/cdn/shop/collections/Group_20008.png?height=40&amp;v=1664844859&amp;width=48 48w
+                  "
+                  width="48"
+                  height="40"
+                  loading="lazy"
+                  class="w-auto"
+                  style="height: 40px"
+                />
+              </div>
+              <p class="text-xs">DELICIOUS FLAVOR</p>
+            </div>
+            <div
+              class="flex flex-col gap-2 justify-start items-center md:ds-width-1 text-center"
+            >
+              <div>
+                <img
+                  src="//www.gummyhair.com.br/cdn/shop/collections/Group_20009.png?height=40&amp;v=1664844846"
+                  alt="Benefícios - Vegan Gummies"
+                  srcset="
+                    //www.gummyhair.com.br/cdn/shop/collections/Group_20009.png?height=40&amp;v=1664844846&amp;width=31 31w
+                  "
+                  width="31"
+                  height="40"
+                  loading="lazy"
+                  class="w-auto"
+                  style="height: 40px"
+                />
+              </div>
+              <p class="text-xs">VEGAN GUMMIES</p>
+            </div>
+            <div
+              class="flex flex-col gap-2 justify-start items-center md:ds-width-1 text-center"
+            >
+              <div>
+                <img
+                  src="//www.gummyhair.com.br/cdn/shop/collections/Group_20010.png?height=40&amp;v=1664844836"
+                  alt="Benefícios - Vegetable Pectin"
+                  srcset="
+                    //www.gummyhair.com.br/cdn/shop/collections/Group_20010.png?height=40&amp;v=1664844836&amp;width=43 43w
+                  "
+                  width="43"
+                  height="40"
+                  loading="lazy"
+                  class="w-auto"
+                  style="height: 40px"
+                />
+              </div>
+              <p class="text-xs">VEGETABLE PECTIN</p>
+            </div>
+            <div
+              class="flex flex-col gap-2 justify-start items-center md:ds-width-1 text-center"
+            >
+              <div>
+                <img
+                  src="//www.gummyhair.com.br/cdn/shop/collections/Group_20011.png?height=40&amp;v=1664844824"
+                  alt="Benefícios - Eco Friendly"
+                  srcset="
+                    //www.gummyhair.com.br/cdn/shop/collections/Group_20011.png?height=40&amp;v=1664844824&amp;width=33 33w
+                  "
+                  width="33"
+                  height="40"
+                  loading="lazy"
+                  class="w-auto"
+                  style="height: 40px"
+                />
+              </div>
+              <p class="text-xs">ECO FRIENDLY</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section
+  id="shopify-section-template--15602561220740__8a99ab9a-6c73-414d-8b91-648f4722db2e"
+  class="shopify-section"
+>
+  <style>
+    #template--15602561220740__8a99ab9a-6c73-414d-8b91-648f4722db2e {
+      --spacing-margin-top: 0px;
+      --spacing-margin-bottom: 0px;
+      --spacing-padding-top: 0px;
+      --spacing-padding-bottom: 0px;
+    }
+  </style>
+  <div id="template--15602561220740__8a99ab9a-6c73-414d-8b91-648f4722db2e" class="ds-bg-5 bg-no-repeat bg-contain bg-top lg:bg-center ds-color-white ds-tab-group-main">
+    <div class="ds-page-container-full border-b-2 border-gray-300">
+      <div class="flex overflow-x-auto ds-bg-5 ds-scrollbar-hidden" aria-label="Tabs">
+        <button class="flex-1 px-3 py-6 text-sm text-center whitespace-nowrap ds-bg-transparent font-black ds-border-b-3 ds-color-accent-5 ds-border-accent-5">
+          <p><strong>SOBRE O PRODUTO</strong></p>
+        </button>
+        <button class="flex-1 px-3 py-6 text-sm text-center whitespace-nowrap ds-bg-transparent font-bold ds-color-white hover:text-gray-300 hover:border-gray-300 hover:font-bold hover:ds-border-b-3">
+          <p><strong>INFO NUTRICIONAL</strong></p>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="shopify-section-template--15602561220740__2688d385-ff78-4a72-80ad-d8f25204de25" class="shopify-section">
+    <div id="template--15602561220740__2688d385-ff78-4a72-80ad-d8f25204de25" class="ds-bg-transparent bg-no-repeat bg-contain bg-top lg:bg-center ds-tab ds-tab-2 ds-tab-group-main hidden">
+      <div class="ds-page-container py-4">
+        <div class=" relative">
+            <div style="gap: 0em;" class="[&amp;>*:first-child]:ml-auto [&amp;>*:last-child]:mr-auto py-4 flex items-stretch overflow-scroll snap-x snap-mandatory ds-scrollbar-hidden">
+                <div id="slide" class="relative min-w-full snap-center ds-bg-transparent">
+                    <button disabled="">
+                        <a class="shrink-0 max-w-full" role="link" aria-disabled="true">
+                            <div>
+                                <picture> 
+                                    <source media="(max-width: 639px)" srcset="//www.gummyhair.com.br/cdn/shop/files/MOBILE-TF.png?v=1694608338&amp;width=300 300w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-TF.png?v=1694608338&amp;width=400 400w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-TF.png?v=1694608338&amp;width=500 500w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-TF.png?v=1694608338&amp;width=600 600w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-TF.png?v=1694608338 750w">
+                                    <source media="(min-width: 640px)" srcset="//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-TF.png?v=1694604447&amp;width=1100 1100w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-TF.png?v=1694604447&amp;width=1500 1500w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-TF.png?v=1694604447&amp;width=1780 1780w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-TF.png?v=1694604447&amp;width=2000 2000w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-TF.png?v=1694604447 2000w">
+                                    <img src="//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-TF.png?v=1694604447&amp;width=2000" alt="" draggable="false" sizes="100vw" loading="lazy" width="2000" height="976" class="mx-auto w-full h-auto ">
+                                </picture>
+                            </div>
+                        </a>
+                        <div class=" inset-0 flex w-full mx-auto absolute top-0 ds-align-right">
+                            <div class="flex flex-col justify-center p-0 w-full text-center lg:p-6 lg:w-5/12 ds-align-middle">
+                                <div class="mt-1 lg:mt-6 sm:mt-0 ds-color-default w-full ds-align-center">
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div id="slide" class="relative min-w-full snap-center ds-bg-transparent">
+                    <button disabled="">
+                        <a class="shrink-0 max-w-full" role="link" aria-disabled="true">
+                            <div>
+                                <picture>
+                                    <source media="(max-width: 639px)" srcset="//www.gummyhair.com.br/cdn/shop/files/MOBILE-MO.png?v=1694608365&amp;width=300 300w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-MO.png?v=1694608365&amp;width=400 400w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-MO.png?v=1694608365&amp;width=500 500w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-MO.png?v=1694608365&amp;width=600 600w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-MO.png?v=1694608365 750w">
+                                    <source media="(min-width: 640px)" srcset="//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MO.png?v=1694604506&amp;width=1100 1100w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MO.png?v=1694604506&amp;width=1500 1500w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MO.png?v=1694604506&amp;width=1780 1780w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MO.png?v=1694604506&amp;width=2000 2000w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MO.png?v=1694604506 2000w">
+                                    <img src="//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MO.png?v=1694604506&amp;width=2000" alt="" draggable="false" sizes="100vw" loading="lazy" width="2000" height="976" class="mx-auto w-full h-auto ">
+                                </picture>
+                            </div>
+                        </a>
+                        <div class=" inset-0 flex w-full mx-auto absolute top-0 ds-align-right">
+                            <div class="flex flex-col justify-center p-0 w-full text-center lg:p-6 lg:w-5/12 ds-align-middle">
+                                <div class="mt-1 lg:mt-6 sm:mt-0 ds-color-default w-full ds-align-center">
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div id="slide" class="relative min-w-full snap-center ds-bg-transparent">
+                    <button disabled="">
+                        <a class="shrink-0 max-w-full" role="link" aria-disabled="true">
+                            <div>
+                                <picture>
+                                    <source media="(max-width: 639px)" srcset="//www.gummyhair.com.br/cdn/shop/files/MOBILE-ML.png?v=1694608383&amp;width=300 300w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-ML.png?v=1694608383&amp;width=400 400w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-ML.png?v=1694608383&amp;width=500 500w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-ML.png?v=1694608383&amp;width=600 600w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-ML.png?v=1694608383 750w">
+                                    <source media="(min-width: 640px)" srcset="//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-ML.png?v=1694604529&amp;width=1100 1100w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-ML.png?v=1694604529&amp;width=1500 1500w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-ML.png?v=1694604529&amp;width=1780 1780w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-ML.png?v=1694604529&amp;width=2000 2000w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-ML.png?v=1694604529 2000w">
+                                    <img src="//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-ML.png?v=1694604529&amp;width=2000" alt="" draggable="false" sizes="100vw" loading="lazy" width="2000" height="976" class="mx-auto w-full h-auto ">
+                                </picture>
+                            </div>
+                        </a>
+                        <div class=" inset-0 flex w-full mx-auto absolute top-0 ds-align-right">
+                            <div class="flex flex-col justify-center p-0 w-full text-center lg:p-6 lg:w-5/12 ds-align-middle">
+                                <div class="mt-1 lg:mt-6 sm:mt-0 ds-color-default w-full ds-align-center">
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <div id="slide" class="relative min-w-full snap-center ds-bg-transparent">
+                    <button disabled="">
+                        <a class="shrink-0 max-w-full" role="link" aria-disabled="true">
+                            <div>
+                                <picture>
+                                    <source media="(max-width: 639px)" srcset="//www.gummyhair.com.br/cdn/shop/files/MOBILE-MV.png?v=1694608417&amp;width=300 300w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-MV.png?v=1694608417&amp;width=400 400w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-MV.png?v=1694608417&amp;width=500 500w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-MV.png?v=1694608417&amp;width=600 600w,//www.gummyhair.com.br/cdn/shop/files/MOBILE-MV.png?v=1694608417 750w">
+                                    <source media="(min-width: 640px)" srcset="//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MV.png?v=1694604689&amp;width=1100 1100w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MV.png?v=1694604689&amp;width=1500 1500w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MV.png?v=1694604689&amp;width=1780 1780w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MV.png?v=1694604689&amp;width=2000 2000w,//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MV.png?v=1694604689 2000w">
+                                    <img src="//www.gummyhair.com.br/cdn/shop/files/TABELA-NUTRICIONAL-MV.png?v=1694604689&amp;width=2000" alt="" draggable="false" sizes="100vw" loading="lazy" width="2000" height="976" class="mx-auto w-full h-auto ">
+                                </picture>
+                            </div>
+                        </a>
+                        <div class=" inset-0 flex w-full mx-auto absolute top-0 ds-align-right">
+                            <div class="flex flex-col justify-center p-0 w-full text-center lg:p-6 lg:w-5/12 ds-align-middle">
+                                <div class="mt-1 lg:mt-6 sm:mt-0 ds-color-default w-full ds-align-center">
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+                <button class="ml-1 absolute flex justify-center left-0 w-10 h-10 my-auto sm:visible inset-y-1/2 text-white rounded-full opacity-40 ds-bg-accent-1 hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+                    </svg>
+                </button>
+                <button class="mr-1 absolute flex justify-center right-0 w-10 h-10 my-auto sm:visible inset-y-1/2 text-center text-white rounded-full opacity-40 ds-bg-accent-1 hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto w-6 h-6" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                    </svg>
+                </button>
+                <div class="pt-4 text-center">
+                    <template x-for="(i, index) in 4">
+                    <button class="p-2">
+                    <div class="p-1 w-0 h-0 rounded-full border ds-border-accent-1"></div>
+                    </button>
+                    </template><button class="p-2">
+                    <div class="p-1 w-0 h-0 rounded-full border ds-border-accent-1 ds-bg-accent-1"></div>
+                    </button><button class="p-2">
+                    <div class="p-1 w-0 h-0 rounded-full border ds-border-accent-1 bg-white"></div>
+                    </button><button class="p-2">
+                    <div class="p-1 w-0 h-0 rounded-full border ds-border-accent-1 bg-white"></div>
+                    </button><button class="p-2">
+                    <div class="p-1 w-0 h-0 rounded-full border ds-border-accent-1 bg-white"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="shopify-section-template--15602561220740__774be139-f6be-4512-9205-d430f99f4d17" class="shopify-section">
+    <style>
+      #template--15602561220740__774be139-f6be-4512-9205-d430f99f4d17 {
+        --spacing-margin-top: 0px;
+        --spacing-margin-bottom: 0px;
+        --spacing-padding-top: 50px;
+        --spacing-padding-bottom: 50px;
+      }
+    </style>
+    <div id="template--15602561220740__774be139-f6be-4512-9205-d430f99f4d17" class="ds-bg-5 bg-no-repeat bg-contain bg-top lg:bg-center ds-color-white ">
+        <div class="ds-page-container-full">
+            <div class="ds-page-container !py-0 !my-0">
+                <div class="ds-align-center">
+                    <h2 class="ds-text-6 ds-format-tags  ds-font-accent ds-color-accent-8  ds-text-">
+                        <p>QUEM ME USOU, AMOU!</p>
+                    </h2>
+                    <div class="ds-text-4 ds-font-body ds-color-white mt-2 ">
+                        <p>Resultados visíveis na primeira semana de uso.</p>
+                    </div>
+                </div>
+            </div>
+        <div>
+          <div class=" relative">
+            <div style="gap: 1em;" class="[&amp;>*:first-child]:ml-auto [&amp;>*:last-child]:mr-auto py-4 flex items-stretch overflow-scroll snap-x snap-mandatory ds-scrollbar-hidden">
+                <div class="p-2 shrink-0 ds-color-default">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="//www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois.png?v=1670963245" alt="" srcset="//www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois.png?v=1670963245&amp;width=352 352w, //www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois.png?v=1670963245&amp;width=832 832w, //www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois.png?v=1670963245&amp;width=1176 1176w" width="1176" height="1155" loading="lazy" class="max-w-[16rem] mx-auto">
+                    </div>
+        <div class="px-2 mx-auto -mt-4 w-5/6 max-w-[16rem]">
+            <div class="flex relative gap-2 p-3 break-words bg-white rounded-lg drop-shadow-md">
+                <div>
+                    <svg class="mt-1 ds-color-accent-1" xmlns="http://www.w3.org/2000/svg" width="17.489" height="11.892" fill="currentColor" stroke="none" viewBox="0 0 17.489 11.892">
+                        <path d="M-6.548-27.927a3.755,3.755,0,0,1-2.886-1.307,4.531,4.531,0,0,1-1.187-3.158,7.944,7.944,0,0,1,.795-3.583A7.319,7.319,0,0,1-7.7-38.588a6.133,6.133,0,0,1,2.94-1.231q-.087.109-.2.24a12.7,12.7,0,0,0-1.089,1.514,2.325,2.325,0,0,0-.414,1.688A4.929,4.929,0,0,1-4.49-35.8a3.951,3.951,0,0,1,1.459,1.35,3.712,3.712,0,0,1,.555,2.058,4.53,4.53,0,0,1-1.2,3.136A3.739,3.739,0,0,1-6.548-27.927Zm9.343,0A3.765,3.765,0,0,1-.08-29.234a4.507,4.507,0,0,1-1.2-3.158,7.855,7.855,0,0,1,.806-3.583,7.475,7.475,0,0,1,2.123-2.614A6.084,6.084,0,0,1,4.6-39.819q-.087.109-.2.24a12.7,12.7,0,0,0-1.089,1.514,2.421,2.421,0,0,0-.436,1.688,4.929,4.929,0,0,1,1.971.577,3.951,3.951,0,0,1,1.459,1.35,3.712,3.712,0,0,1,.555,2.058,4.553,4.553,0,0,1-1.187,3.136A3.729,3.729,0,0,1,2.8-27.927Z" transform="translate(10.621 39.819)"></path>
+                    </svg>
+                </div>
+                <div>
+                  <h3 class="mb-2 font-bold drop-shadow-sm"><p>Maria Silva</p></h3>
+                <div class="text-sm">
+                  <p>Eu amo, meu cabelo cresceu muito, as unhas estão mais fortes, fora que é uma delícia. Não fico sem! </p>
+                </div>
+              </div>
+            </div>
+        </div>
+      
+    </div>
+    <div class="p-2 shrink-0 ds-color-default">
+        <div class="overflow-hidden rounded-lg">
+            <img src="//www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois1.png?v=1670963262" alt="" srcset="//www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois1.png?v=1670963262&amp;width=352 352w, //www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois1.png?v=1670963262&amp;width=832 832w, //www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois1.png?v=1670963262&amp;width=1176 1176w" width="1176" height="1155" loading="lazy" class="max-w-[16rem] mx-auto">
+        </div>
+        <div class="px-2 mx-auto -mt-4 w-5/6 max-w-[16rem]">
+            <div class="flex relative gap-2 p-3 break-words bg-white rounded-lg drop-shadow-md">
+                <div>
+                    <svg class="mt-1 ds-color-accent-1" xmlns="http://www.w3.org/2000/svg" width="17.489" height="11.892" fill="currentColor" stroke="none" viewBox="0 0 17.489 11.892">
+                        <path d="M-6.548-27.927a3.755,3.755,0,0,1-2.886-1.307,4.531,4.531,0,0,1-1.187-3.158,7.944,7.944,0,0,1,.795-3.583A7.319,7.319,0,0,1-7.7-38.588a6.133,6.133,0,0,1,2.94-1.231q-.087.109-.2.24a12.7,12.7,0,0,0-1.089,1.514,2.325,2.325,0,0,0-.414,1.688A4.929,4.929,0,0,1-4.49-35.8a3.951,3.951,0,0,1,1.459,1.35,3.712,3.712,0,0,1,.555,2.058,4.53,4.53,0,0,1-1.2,3.136A3.739,3.739,0,0,1-6.548-27.927Zm9.343,0A3.765,3.765,0,0,1-.08-29.234a4.507,4.507,0,0,1-1.2-3.158,7.855,7.855,0,0,1,.806-3.583,7.475,7.475,0,0,1,2.123-2.614A6.084,6.084,0,0,1,4.6-39.819q-.087.109-.2.24a12.7,12.7,0,0,0-1.089,1.514,2.421,2.421,0,0,0-.436,1.688,4.929,4.929,0,0,1,1.971.577,3.951,3.951,0,0,1,1.459,1.35,3.712,3.712,0,0,1,.555,2.058,4.553,4.553,0,0,1-1.187,3.136A3.729,3.729,0,0,1,2.8-27.927Z" transform="translate(10.621 39.819)"></path>
+                    </svg>
+                </div>
+                <div>
+                  <h3 class="mb-2 font-bold drop-shadow-sm"><p>Luiza Souza</p></h3>
+                <div class="text-sm">
+                  <p>Meu cabelo estava bem ralinho , após tomar o gummy notei o crescimento mais rápido e o cabelo mais cheio, muito cabelos novinhos</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-2 shrink-0 ds-color-default">
+        <div class="overflow-hidden rounded-lg">
+            <img src="//www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois2.png?v=1670963274" alt="" srcset="//www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois2.png?v=1670963274&amp;width=352 352w, //www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois2.png?v=1670963274&amp;width=832 832w, //www.gummyhair.com.br/cdn/shop/files/Antes-e-Depois2.png?v=1670963274&amp;width=1176 1176w" width="1176" height="1155" loading="lazy" class="max-w-[16rem] mx-auto">
+        </div>
+        <div class="px-2 mx-auto -mt-4 w-5/6 max-w-[16rem]">
+            <div class="flex relative gap-2 p-3 break-words bg-white rounded-lg drop-shadow-md">
+                <div>
+                    <svg class="mt-1 ds-color-accent-1" xmlns="http://www.w3.org/2000/svg" width="17.489" height="11.892" fill="currentColor" stroke="none" viewBox="0 0 17.489 11.892">
+                        <path d="M-6.548-27.927a3.755,3.755,0,0,1-2.886-1.307,4.531,4.531,0,0,1-1.187-3.158,7.944,7.944,0,0,1,.795-3.583A7.319,7.319,0,0,1-7.7-38.588a6.133,6.133,0,0,1,2.94-1.231q-.087.109-.2.24a12.7,12.7,0,0,0-1.089,1.514,2.325,2.325,0,0,0-.414,1.688A4.929,4.929,0,0,1-4.49-35.8a3.951,3.951,0,0,1,1.459,1.35,3.712,3.712,0,0,1,.555,2.058,4.53,4.53,0,0,1-1.2,3.136A3.739,3.739,0,0,1-6.548-27.927Zm9.343,0A3.765,3.765,0,0,1-.08-29.234a4.507,4.507,0,0,1-1.2-3.158,7.855,7.855,0,0,1,.806-3.583,7.475,7.475,0,0,1,2.123-2.614A6.084,6.084,0,0,1,4.6-39.819q-.087.109-.2.24a12.7,12.7,0,0,0-1.089,1.514,2.421,2.421,0,0,0-.436,1.688,4.929,4.929,0,0,1,1.971.577,3.951,3.951,0,0,1,1.459,1.35,3.712,3.712,0,0,1,.555,2.058,4.553,4.553,0,0,1-1.187,3.136A3.729,3.729,0,0,1,2.8-27.927Z" transform="translate(10.621 39.819)"></path>
+                    </svg>
+              </div>
+                <div>
+                    <h3 class="mb-2 font-bold drop-shadow-sm"><p>Marcia Cavalcanti</p></h3>
+                <div class="text-sm">
+                  <p>Foi perfeito pro meu cabelo! Está crescendo muito e bem forte sem falar no brilho! Estou amando!</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <button class="ml-1 absolute flex justify-center left-0 w-10 h-10 my-auto sm:visible inset-y-1/2 text-white rounded-full opacity-40 ds-bg-accent-1 hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+        </svg>
+    </button>
+    <button class="mr-1 absolute flex justify-center right-0 w-10 h-10 my-auto sm:visible inset-y-1/2  text-center text-white rounded-full opacity-40 ds-bg-accent-1">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto w-6 h-6" width="24" height="24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+        </svg>
+    </button>
+    </div>   
+    </div>
+    </div>
+  </div>
+  </section>

@@ -1,43 +1,49 @@
 {
-  "hash": "f63f06f4",
-  "configHash": "f817d37a",
+  "hash": "9afa9f5e",
+  "configHash": "4c819ccd",
   "lockfileHash": "97e467ef",
-  "browserHash": "bc263924",
+  "browserHash": "365eac95",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "d0002ebf",
+      "fileHash": "2931f2a0",
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "2d5e9541",
+      "fileHash": "e94df11f",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "bab4cafa",
+      "fileHash": "52ea1de5",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "36d9a008",
+      "fileHash": "4fcb66be",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "6c64c1b2",
+      "fileHash": "b91ed0ac",
       "needsInterop": false
     },
     "rxjs": {
       "src": "../../../../../node_modules/rxjs/dist/esm5/index.js",
       "file": "rxjs.js",
-      "fileHash": "9d46093c",
+      "fileHash": "d6a85df7",
+      "needsInterop": false
+    },
+    "ngx-slick-carousel": {
+      "src": "../../../../../node_modules/ngx-slick-carousel/fesm2022/ngx-slick-carousel.mjs",
+      "file": "ngx-slick-carousel.js",
+      "fileHash": "fc451d7a",
       "needsInterop": false
     }
   },
