@@ -32,6 +32,10 @@ export class GummyService {
   getImagensProdutos(): Observable<any[]> {
     return this.http.get<any[]>('/assets/imagens-produtos.json');
   }
+
+  getQueridinhos(): Observable<any[]> {
+    return this.http.get<any[]>('/assets/queridinhos.json');
+  }
   getThumbnailsImagensProdutos(): Observable<any[]> {
     return this.http.get<any[]>('/assets/imagens-produtos-thumb.json');
   }

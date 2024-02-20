@@ -1,0 +1,41 @@
+[
+    {
+      "alt": "Gummy Hair",
+      "promo": "",
+      "nome": "Gummy Hair",
+      "imagem": "//www.gummyhair.com.br/cdn/shop/files/01-TF_bbfed7f7-1f09-485b-814a-81dc87a5dd1b.webp?v=1701535039&width=220",
+      "valorParcelado": "ou 12x R$ 15,35",
+      "valorComDesconto": "R$ 149,00",
+      "valorSemDesconto": "",
+      "variacoes": [
+        {"nome": "Tutti-Frutti / 1 MÊS", "link": null},
+        {"nome": "Tutti-Frutti / 3 MESES", "link": null},
+        {"nome": "Tutti-Frutti / 6 MESES", "link": null},
+        {"nome": "Morango / 1 MÊS", "link": null},
+        {"nome": "Morango / 3 MESES", "link": null},
+        {"nome": "Morango / 6 MESES", "link": null},
+        {"nome": "Maçã Verde / 1 MÊS", "link": null},
+        {"nome": "Maçã Verde / 3 MESES", "link": null},
+        {"nome": "Maçã Verde / 6 MESES", "link": null},
+        {"nome": "Melancia / 1 MÊS", "link": null},
+        {"nome": "Melancia / 3 MESES", "link": null},
+        {"nome": "Melancia / 6 MESES", "link": null},
+        {"nome": "Mix de Sabores / 1 MÊS", "link": null},
+        {"nome": "Mix de Sabores / 3 MESES", "link": null},
+        {"nome": "Mix de Sabores / 6 MESES", "link": null}
+      ]
+    },
+    {
+      "alt": "Gummy Collagen Drink",
+      "promo": "13% OFF",
+      "nome": "Gummy Collagen Drink",
+      "imagem": "//www.gummyhair.com.br/cdn/shop/files/Kit1SiteCollageno_1.png?v=1705611759&width=220",
+      "valorParcelado": "ou 12x R$ 14,32",
+      "valorComDesconto": "R$ 139,00",
+      "valorSemDesconto": "R$ 159,00",
+      "variacoes": [
+        {"nome": "Cranberry com Pitaya", "link": null},
+        {"nome": "Maçã Encantada", "link": null}
+      ]
+    }
+  ]

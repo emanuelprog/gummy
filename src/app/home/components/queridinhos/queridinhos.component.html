@@ -1,0 +1,176 @@
+<section id="shopify-section-template--15602560893060__39b2ea6e-1664-4201-9f94-a8ffece463c7" class="shopify-section">
+  <style>
+    #template--15602560893060__39b2ea6e-1664-4201-9f94-a8ffece463c7 {
+      --spacing-margin-top: 10px;
+      --spacing-margin-bottom: 0px;
+      --spacing-padding-top: 0px;
+      --spacing-padding-bottom: 30px;
+    }
+  </style>
+  <style>
+    .animate-transition {
+      transition: all 500ms ease-in;
+    }
+
+    .product-card-invisible {
+      opacity: 0;
+    }
+  </style>
+  <div id="template--15602560893060__39b2ea6e-1664-4201-9f94-a8ffece463c7" class="ds-bg-transparent bg-no-repeat bg-contain bg-top lg:bg-center ds-color-black">
+    <div class="ds-page-container">
+      <div class="flex flex-row items-end place-content-between">
+        <div class="w-full">
+          <div class="ds-align-center">
+            <h2 class="ds-text-5 ds-format-tags ds-font-heading ds-color-text ds-text-"
+            >
+              <p><strong>OS QUERIDINHOS</strong></p>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="overflow-x-auto relative py-4">
+        <div class="relative pb-6 w-full md:pb-0">
+          <div class="relative">
+            <div role="list" id="slider" style="gap: 0em" class="[&amp;>*:first-child]:ml-4 [&amp;>*:last-child]:mr-4 lg:[&amp;>*:first-child]:ml-0 lg:[&amp;>*:last-child]:mr-0 py-4 flex items-stretch overflow-scroll snap-x snap-mandatory ds-scrollbar-hidden">
+              <div *ngFor="let produto of queridinhos" id="template--15602560893060__39b2ea6e-1664-4201-9f94-a8ffece463c7-product-cards" class="shrink-0 w-[calc(100%/var(--grid-column-count))] min-w-[var(--grid-item--min-width)] mr-[var(--grid-layout-gap)] inline-flex flex-col">
+                <div class="flex flex-col h-full ds-bg-transparent ds-product-card group">
+                  <div class="relative grow">
+                    <div class="overflow-hidden relative mb-6 w-full ds-bg-transparent ds-image-product-card aspect-w-1 aspect-h-1">
+                      <div class="absolute ds-badge text-sm px-2 z-10 ds-bg-accent-2 ds-color-white w-fit h-fit right-4 bottom-4 top-auto left-auto">
+                        {{produto.promo}}
+                      </div>
+
+                      <img
+                        src="{{produto.imagem}}"
+                        sizes="(min-width: px) -33px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                        alt="{{produto.alt}}"
+                        width="1000"
+                        height="1000"
+                        class="object-cover object-center w-full h-full group-hover:opacity-75"
+                      />
+                    </div>
+
+                    <div class="flex flex-col">
+                      <h3 class="mt-1 font-semibold text-gray-900">
+                        <a>
+                          <span class="absolute inset-0"></span>
+                          {{produto.nome}}
+                        </a>
+                      </h3>
+
+                      <div class="text-gray-600 flex flex-col-reverse">
+                        <div class="ds-text-4 text-sm text-gray-500">
+                         {{produto.valorParcelado}}
+                        </div>
+
+                        <div class="text-lg">
+                          <div class="inline-block">
+                            <span class="ds-text-3"> {{produto.valorComDesconto}} </span>
+                            <s class="ds-text-4 ds-price-discount">{{produto.valorSemDesconto}}</s>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grow-0">
+                    <form class="form">
+                      <select class="mt-2 w-full ds-input">
+                        <option *ngFor="let variacao of produto.variacoes" [value]="variacao.nome">{{ variacao.nome }}</option>
+                      </select>
+
+                      <button type="button" class="h-9 disabled:bg-gray-300 mt-4 w-full ds-btn brightness-100 hover:brightness-110 ds-btn-text-1 ds-btn-border-1 ds-btn-sm ds-btn-gradient-2">
+                        <span>Comprar </span>
+                      </button>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <button [class.hidden]="firstChild" class="ml-1 absolute flex justify-center left-0 w-10 h-10 my-auto sm:visible inset-y-1/2 text-white rounded-full opacity-40 ds-bg-accent-1 hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+              </svg> 
+            </button>
+            <button [class.hidden]="lastChild" class="mr-1 absolute flex justify-center right-0 w-10 h-10 my-auto sm:visible inset-y-1/2  text-center text-white rounded-full opacity-40 ds-bg-accent-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto w-6 h-6" width="24" height="24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section>
+  <div id="template--15602560893060__39b2ea6e-1664-4201-9f94-a8ffece463c7" class="ds-bg-transparent bg-no-repeat bg-contain bg-top lg:bg-center ds-color-black">
+    <div class="ds-page-container">
+      <div class="flex flex-row items-end place-content-between">
+        <div class="w-full">
+          <div class="ds-align-center">
+            <h2 class="ds-text-5 ds-format-tags ds-font-heading ds-color-text ds-text-">
+              <p><strong>OS QUERIDINHOS</strong></p>
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="overflow-x-auto relative py-4">
+        <div class="relative pb-6 w-full md:pb-0">
+          <div class="relative">
+            <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
+                <div ngxSlickItem *ngFor="let produto of queridinhos">
+                  <div class="relative grow">
+                    <div class="overflow-hidden relative mb-6 w-full ds-bg-transparent ds-image-product-card aspect-w-1 aspect-h-1">
+                        <div class="absolute ds-badge text-sm px-2 z-10 ds-bg-accent-2 ds-color-white w-fit h-fit right-4 bottom-4 top-auto left-auto">{{ produto.promo }}</div>
+                        <img src="{{produto.imagem}}" sizes="(min-width: px) -33px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                            alt="{{produto.alt}}"
+                            width="1000"
+                            height="1000"
+                            class="object-cover object-center w-full h-full group-hover:opacity-75"/>
+                    </div>
+
+                    <div class="flex flex-col">
+                      <h3 class="mt-1 font-semibold text-gray-900">
+                        <a>
+                          <span class="absolute inset-0"></span>
+                          {{produto.nome}}
+                        </a>
+                      </h3>
+
+                      <div class="text-gray-600 flex flex-col-reverse">
+                        <div class="ds-text-4 text-sm text-gray-500">
+                          {{produto.valorParcelado}}
+                        </div>
+
+                        <div class="text-lg">
+                          <div class="inline-block">
+                            <span class="ds-text-3"> {{produto.valorComDesconto}} </span>
+                            <s class="ds-text-4 ds-price-discount">{{produto.valorSemDesconto}}</s>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grow-0">
+                    <form class="form">
+                      <select class="mt-2 w-full ds-input">
+                        <option *ngFor="let variacao of produto.variacoes" [value]="variacao.nome">{{ variacao.nome }}</option>
+                      </select>
+
+                      <button type="button" class="h-9 disabled:bg-gray-300 mt-4 w-full ds-btn brightness-100 hover:brightness-110 ds-btn-text-1 ds-btn-border-1 ds-btn-sm ds-btn-gradient-2">
+                        <span>Comprar </span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+            </ngx-slick-carousel>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

@@ -8,6 +8,7 @@ import {DuvidasComponent} from "./components/duvidas/duvidas.component";
 import {ComunidadeComponent} from "../comunidade/comunidade.component";
 import {IconesPrincipalComponent} from "./components/icones-principal/icones-principal.component";
 import {BannersPrincipalComponent} from "./components/banners-principal/banners-principal.component";
+import { QueridinhosComponent } from './components/queridinhos/queridinhos.component';
 
 @Component({
     selector: 'app-home',
@@ -22,7 +23,8 @@ import {BannersPrincipalComponent} from "./components/banners-principal/banners-
         DuvidasComponent,
         ComunidadeComponent,
         IconesPrincipalComponent,
-        BannersPrincipalComponent
+        BannersPrincipalComponent,
+        QueridinhosComponent
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.css'
