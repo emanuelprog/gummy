@@ -1,0 +1,33 @@
+[
+    {
+      "alt": "2 Gummy Hair",
+      "promo": "20% OFF",
+      "nome": "2 Gummy Hair",
+      "imagem": "../../../../assets/2gummy-hair.png",
+      "valorparcelado": "ou 12x R$ 24,62",
+      "valorComDesconto": "R$ 239,00",
+      "valorSemDesconto": "R$ 298,00",
+      "variacoes": [
+        {"nome": "Tutti-Frutti", "link": null},
+        {"nome": "Morango", "link": null},
+        {"nome": "Maçã Verde", "link": null},
+        {"nome": "Melancia", "link": null}
+      ]
+    },
+    {
+      "alt": "3 Gummy Hair",
+      "promo": "20% OFF",
+      "nome": "3 Gummy Hair",
+      "imagem": "../../../../assets/3gummy-hair.png",
+      "valorparcelado": "ou 12x R$ 30,80",
+      "valorComDesconto": "R$ 299,00",
+      "valorSemDesconto": "R$ 447,00",
+      "variacoes": [
+        {"nome": "Tutti-Frutti", "link": null},
+        {"nome": "Morango", "link": null},
+        {"nome": "Maçã Verde", "link": null},
+        {"nome": "Melancia", "link": null},
+        {"nome": "Mix de Sabores", "link": null}
+      ]
+    }
+  ]

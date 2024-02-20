@@ -25,54 +25,50 @@
             <div class="relative lg:col-span-3" id="productDiv">
                 <div>
                     <ul id="products-container" class="auto-cols-auto ds-grid-container">
-                        <li class="inline-flex flex-col">
-                            <div
-                            class="flex flex-col h-full ds-bg-transparent ds-product-card group">
-                                <div class="relative grow">
-                                    <div class="overflow-hidden-relative mb-6 w-full ds-bg-transparent ds-image-product-card aspect-w-1 aspect-h-1">
-                                        <div class="absolute ds-badge text-sm px-2 z-10 ds-bg-accent-2 ds-color-white  w-fit h-fit right-4 bottom-4 top-auto left-auto"> 20% OFF </div>
-                                        <img src="../../../../assets/2gummy-hair.png" alt="2 Gummy Hair" loading="lazy" width="1000" height="1000" class=" object-cover object-center w-full h-full group-hover:opacity-75">
+                          <li class="inline-flex flex-col" *ngFor="let produto of produtos">
+                              <div
+                              class="flex flex-col h-full ds-bg-transparent ds-product-card group">
+                                  <div class="relative grow">
+                                      <div class="overflow-hidden-relative mb-6 w-full ds-bg-transparent ds-image-product-card aspect-w-1 aspect-h-1">
+                                          <div class="absolute ds-badge text-sm px-2 z-10 ds-bg-accent-2 ds-color-white  w-fit h-fit right-4 bottom-4 top-auto left-auto"> {{produto.promo}} </div>
+                                          <img src="{{produto.imagem}}" alt="{{produto.alt}}" width="1000" height="1000" class="object-cover object-center w-full h-full group-hover:opacity-75">
                                       </div>
-                                        
-                                    <div class="flex flex-col">
-                                        <h3 class="mt-1 font-semibold text-gray-900">
-                                            <a href="/products/02-gummy-hair-vitamin?variant=41425142186116">
-                                            <span class="absolute inset-0"></span>
-                                            2 Gummy Hair
-                                          </a>
-                                        </h3>
-                                        <div class="text-gray-600 flex flex-col-reverse">
-                                            <div class="ds-text-4 text-sm text-gray-500"> ou 12x R$ 24,62</div>
-                                            <div class="text-lg">
-                                                <div class="inline-block">
-                                                  <span class=" ds-text-3">
-                                                    R$ 239,00
-                                                  </span>
-                                                  <s class="ds-text-4 ds-price-discount">R$ 298,00</s>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="grow-0">
-                                    <form accept-charset="UTF-8" class="form">
-                                        <input type="hidden" name="form-type" value="product">
-                                        <input type="hidden" name="utf8" value="✓">
-                                        <input type="hidden" name="quantity" value="1">
-                                        <select name="id" class="mt-2 w-full ds-input">
-                                            <option selected="selected" value="41425142186116">Tutti-Frutti</option>
-                                            <option value="41425142284420">Morango</option>
-                                            <option value="41425142218884">Maçã Verde</option>
-                                            <option value="41425142251652">Melancia</option>
-                                        </select>
-                                        <button type="button" name="add" class="h-9 disabled:bg-gray-300 mt-4 w-full ds-btn brightness-100 hover:brightness-110 
-                                        ds-btn-text-1 ds-btn-border-1 ds-btn-sm ds-btn-gradient-2">
-                                            <span>Comprar</span>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </li>
+                                      <div class="flex flex-col">
+                                          <h3 class="mt-1 font-semibold text-gray-900">
+                                              <a>
+                                              <span class="absolute inset-0"></span>
+                                              {{produto.nome}}
+                                            </a>
+                                          </h3>
+                                          <div class="text-gray-600 flex flex-col-reverse">
+                                              <div class="ds-text-4 text-sm text-gray-500"> {{produto.valorParcelado}}</div>
+                                              <div class="text-lg">
+                                                  <div class="inline-block">
+                                                    <span class=" ds-text-3">
+                                                      {{produto.valorComDesconto}}
+                                                    </span>
+                                                    <s class="ds-text-4 ds-price-discount">{{produto.valorSemDesconto}}</s>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="grow-0">
+                                      <form accept-charset="UTF-8" class="form">
+                                          <input type="hidden" name="form-type" value="product">
+                                          <input type="hidden" name="utf8" value="✓">
+                                          <input type="hidden" name="quantity" value="1">
+                                          <select name="id" class="mt-2 w-full ds-input">
+                                              <option *ngFor="let variacao of produto.variacoes" [value]="variacao.nome">{{ variacao.nome }}</option>
+                                          </select>
+                                          <button type="button" name="add" class="h-9 disabled:bg-gray-300 mt-4 w-full ds-btn brightness-100 hover:brightness-110 
+                                          ds-btn-text-1 ds-btn-border-1 ds-btn-sm ds-btn-gradient-2">
+                                              <span>Comprar</span>
+                                          </button>
+                                      </form>
+                                  </div>
+                              </div>
+                          </li>
                     </ul>
                 </div>
             </div>

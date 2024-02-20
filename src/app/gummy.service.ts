@@ -18,4 +18,8 @@ export class GummyService {
         map(colecoes => colecao ? colecoes.find(c => c.slug === colecao) : null)
     );
   }
+
+  getProdutos(): Observable<any[]> {
+    return this.http.get<any[]>('/assets/produtos.json');
+  }
 }

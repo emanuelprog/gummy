@@ -4,6 +4,7 @@ import {ActivatedRoute} from "@angular/router";
 import {GummyService} from "../gummy.service";
 import {BannerComponent} from "./components/banner/banner.component";
 import {ProdutosComponent} from "./components/produtos/produtos.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-collection',
@@ -11,7 +12,8 @@ import {ProdutosComponent} from "./components/produtos/produtos.component";
   imports: [
     BreadcrumbComponent,
     BannerComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    CommonModule
   ],
   templateUrl: './collection.component.html',
   styleUrl: './collection.component.css'
