@@ -4,12 +4,30 @@ import { CommonModule, NgForOf } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { GummyService } from '../gummy.service';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ResultadosComponent } from '../home/components/resultados/resultados.component';
+import { IconesComponent } from '../home/components/icones/icones.component';
+import { CelebridadesComponent } from '../home/components/celebridades/celebridades.component';
+import { GummyComponent } from '../home/components/gummy/gummy.component';
+import { DuvidasComponent } from '../home/components/duvidas/duvidas.component';
+import { ComunidadeComponent } from '../comunidade/comunidade.component';
+import { IconesPrincipalComponent } from '../home/components/icones-principal/icones-principal.component';
+import { BannersPrincipalComponent } from '../home/components/banners-principal/banners-principal.component';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [BreadcrumbComponent, CommonModule, RouterLink, SlickCarouselModule,
-    NgForOf],
+  imports: [
+    BreadcrumbComponent, 
+    CommonModule, 
+    RouterLink, 
+    SlickCarouselModule,
+    NgForOf,
+    ResultadosComponent,
+    IconesComponent,
+    CelebridadesComponent,
+    GummyComponent,
+    DuvidasComponent,
+    ComunidadeComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
