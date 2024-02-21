@@ -20,6 +20,7 @@ export class QueridinhosComponent {
     queridinhos: any[] = [];
     firstChild: boolean = true;
     lastChild: boolean = false;
+    previousScrollLeft = 0;
 
     ngOnInit() {
       this.gummyService.getQueridinhos().subscribe(dados => {
@@ -38,13 +39,21 @@ export class QueridinhosComponent {
     onScroll = (event: any) => {
       const divElement = event.target;
       const currentScrollLeft = divElement.scrollLeft;
-      
-      if (currentScrollLeft > 0) {
-        this.firstChild = false;
-        this.lastChild = true;
-      } else {
-        this.firstChild = true;
-        this.lastChild = false;
+    
+      if (currentScrollLeft !== this.previousScrollLeft) {
+        this.previousScrollLeft = currentScrollLeft;
+        
+        if (currentScrollLeft === 0) {
+          this.firstChild = true;
+        } else {
+          this.firstChild = false;
+        }
+        
+        if (currentScrollLeft + divElement.offsetWidth >= divElement.scrollWidth) {
+          this.lastChild = true;
+        } else {
+          this.lastChild = false;
+        }
       }
     }
 

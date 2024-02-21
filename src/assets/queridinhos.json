@@ -37,5 +37,19 @@
         {"nome": "Cranberry com Pitaya", "link": null},
         {"nome": "Maçã Encantada", "link": null}
       ]
+    },
+    {
+      "alt": "Gummy Imune Kids",
+      "promo": "",
+      "nome": "Gummy Imune Kids",
+      "imagem": "../assets/imunekids.webp",
+      "valorParcelado": "ou 12x R$ 8,14",
+      "valorComDesconto": "R$ 79,00",
+      "valorSemDesconto": "",
+      "variacoes": [
+        {"nome": "01 MÊS", "link": null},
+        {"nome": "02 MÊS", "link": null},
+        {"nome": "03 MÊS", "link": null}
+      ]
     }
   ]
