@@ -1,0 +1,45 @@
+[
+    {
+      "alt": "Combo 3 Gummy Hair + 1 Necessaire + 1 Hair Mask",
+      "promo": "36% OFF",
+      "nome": "Combo 3 Gummy Hair + 1 Necessaire + 1 Hair Mask",
+      "imagem": "../assets/Combo-Tutti-Frutti_HairMask_Necessaire.webp",
+      "valorParcelado": "ou 12x R$ 33,89",
+      "valorComDesconto": "R$ 329,00",
+      "valorSemDesconto": "R$ 516,00",
+      "temVariacao": "true",
+      "variacoes": [
+        {"nome": "Tutti-Frutti", "link": null},
+        {"nome": "Morango", "link": null},
+        {"nome": "Maçã Verde", "link": null},
+        {"nome": "Melancia", "link": null},
+        {"nome": "Mix de Sabores", "link": null}
+      ]
+    },
+    {
+      "alt": "Combo 2 Gummy Hair + 2 Gummy Skin",
+      "promo": "39% OFF",
+      "nome": "Combo 3 Gummy Hair + 1 Necessaire + 1 Hair Mask",
+      "imagem": "../assets/Combo-2Tutti-Frutti_2Skin_Necessaire.webp",
+      "valorParcelado": "ou 12x R$ 34,92",
+      "valorComDesconto": "R$ 339,00",
+      "valorSemDesconto": "R$ 556,00",
+      "temVariacao": "true",
+      "variacoes": [
+        {"nome": "Tutti-Frutti", "link": null},
+        {"nome": "Morango", "link": null},
+        {"nome": "Maçã Verde", "link": null},
+        {"nome": "Melancia", "link": null}
+      ]
+    },
+    {
+      "alt": "03 Gummy Apple Cider Vinegar",
+      "promo": "16% OFF",
+      "nome": "03 Gummy Apple Cider Vinegar",
+      "imagem": "../assets/Kit-3-gummyapple.png",
+      "temVariacao": "false",
+      "valorParcelado": "ou 12x R$ 30,80",
+      "valorComDesconto": "R$ 299,00",
+      "valorSemDesconto": "R$ 357,00"
+    }
+  ]

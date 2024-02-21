@@ -21,9 +21,8 @@
       <div class="flex flex-row items-end place-content-between">
         <div class="w-full">
           <div class="ds-align-center">
-            <h2 class="ds-text-5 ds-format-tags ds-font-heading ds-color-text ds-text-"
-            >
-              <p><strong>OS QUERIDINHOS</strong></p>
+            <h2 class="ds-text-5 ds-format-tags  ds-font-heading ds-color-accent-1  ds-text-">
+              <p>TOP OFERTAS GUMMY</p>
             </h2>
           </div>
         </div>
@@ -31,19 +30,19 @@
       <div class="overflow-x-auto relative py-4">
         <div class="relative pb-6 w-full md:pb-0">
           <div class="relative">
-            <div role="list" id="sliderQueridinhos" style="gap: 0em" class="[&amp;>*:first-child]:ml-4 [&amp;>*:last-child]:mr-4 lg:[&amp;>*:first-child]:ml-0 lg:[&amp;>*:last-child]:mr-0 py-4 flex items-stretch overflow-scroll snap-x snap-mandatory ds-scrollbar-hidden">
-              <div *ngFor="let produto of queridinhos" id="template--15602560893060__39b2ea6e-1664-4201-9f94-a8ffece463c7-product-cards" class="shrink-0 w-[calc(100%/var(--grid-column-count))] min-w-[var(--grid-item--min-width)] mr-[var(--grid-layout-gap)] inline-flex flex-col">
+            <div role="list" id="sliderTopOfertas" style="gap: 0em" class="[&amp;>*:first-child]:ml-4 [&amp;>*:last-child]:mr-4 lg:[&amp;>*:first-child]:ml-0 lg:[&amp;>*:last-child]:mr-0 py-4 flex items-stretch overflow-scroll snap-x snap-mandatory ds-scrollbar-hidden">
+              <div *ngFor="let oferta of ofertas" id="template--15602560893060__39b2ea6e-1664-4201-9f94-a8ffece463c7-product-cards" class="shrink-0 w-[calc(100%/var(--grid-column-count))] min-w-[var(--grid-item--min-width)] mr-[var(--grid-layout-gap)] inline-flex flex-col">
                 <div class="flex flex-col h-full ds-bg-transparent ds-product-card group">
                   <div class="relative grow">
                     <div class="overflow-hidden relative mb-6 w-full ds-bg-transparent ds-image-product-card aspect-w-1 aspect-h-1">
                       <div class="absolute ds-badge text-sm px-2 z-10 ds-bg-accent-2 ds-color-white w-fit h-fit right-4 bottom-4 top-auto left-auto">
-                        {{produto.promo}}
+                        {{oferta.promo}}
                       </div>
 
                       <img
-                        src="{{produto.imagem}}"
+                        src="{{oferta.imagem}}"
                         sizes="(min-width: px) -33px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                        alt="{{produto.alt}}"
+                        alt="{{oferta.alt}}"
                         width="1000"
                         height="1000"
                         class="object-cover object-center w-full h-full group-hover:opacity-75"
@@ -54,19 +53,19 @@
                       <h3 class="mt-1 font-semibold text-gray-900">
                         <a>
                           <span class="absolute inset-0"></span>
-                          {{produto.nome}}
+                          {{oferta.nome}}
                         </a>
                       </h3>
 
                       <div class="text-gray-600 flex flex-col-reverse">
                         <div class="ds-text-4 text-sm text-gray-500">
-                         {{produto.valorParcelado}}
+                         {{oferta.valorParcelado}}
                         </div>
 
                         <div class="text-lg">
                           <div class="inline-block">
-                            <span class="ds-text-3"> {{produto.valorComDesconto}} </span>
-                            <s class="ds-text-4 ds-price-discount">{{produto.valorSemDesconto}}</s>
+                            <span class="ds-text-3"> {{oferta.valorComDesconto}} </span>
+                            <s class="ds-text-4 ds-price-discount">{{oferta.valorSemDesconto}}</s>
                           </div>
                         </div>
                       </div>
@@ -75,8 +74,8 @@
 
                   <div class="grow-0">
                     <form class="form">
-                      <select class="mt-2 w-full ds-input">
-                        <option *ngFor="let variacao of produto.variacoes" [value]="variacao.nome">{{ variacao.nome }}</option>
+                      <select class="mt-2 w-full ds-input" [hidden]="!oferta.variacoes">
+                        <option *ngFor="let variacao of oferta.variacoes" [value]="variacao.nome">{{ variacao.nome }}</option>
                       </select>
 
                       <button type="button" class="h-9 disabled:bg-gray-300 mt-4 w-full ds-btn brightness-100 hover:brightness-110 ds-btn-text-1 ds-btn-border-1 ds-btn-sm ds-btn-gradient-2">

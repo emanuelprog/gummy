@@ -1,35 +1,35 @@
 import { NgForOf } from '@angular/common';
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { GummyService } from '../../../gummy.service';
 
 @Component({
-  selector: 'app-queridinhos',
+  selector: 'app-top-ofertas',
   standalone: true,
   imports: [SlickCarouselModule, NgForOf],
-  templateUrl: './queridinhos.component.html',
-  styleUrl: './queridinhos.component.css'
+  templateUrl: './top-ofertas.component.html',
+  styleUrl: './top-ofertas.component.css'
 })
-export class QueridinhosComponent {
+export class TopOfertasComponent {
 
   constructor(
     private route: ActivatedRoute,
     private gummyService: GummyService
     ) {}
-    queridinhos: any[] = [];
+    ofertas: any[] = [];
     firstChild: boolean = true;
     lastChild: boolean = false;
     previousScrollLeft = 0;
 
     ngOnInit() {
-      this.gummyService.getQueridinhos().subscribe(dados => {
-      this.queridinhos = dados;
+      this.gummyService.getTopOfertas().subscribe(dados => {
+      this.ofertas = dados;
       });
     }
 
     ngAfterViewInit(): void {
-      const divElement = document.getElementById('sliderQueridinhos');
+      const divElement = document.getElementById('sliderTopOfertas');
       if (divElement) {
         divElement.addEventListener('scroll', this.onScroll);
       } 

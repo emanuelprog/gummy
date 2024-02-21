@@ -33,8 +33,16 @@ export class GummyService {
     return this.http.get<any[]>('/assets/imagens-produtos.json');
   }
 
+  getVitrineHome(): Observable<any[]> {
+    return this.http.get<any[]>('/assets/vitrine-home.json');
+  }
+
   getQueridinhos(): Observable<any[]> {
     return this.http.get<any[]>('/assets/queridinhos.json');
+  }
+
+  getTopOfertas(): Observable<any[]> {
+    return this.http.get<any[]>('/assets/top-ofertas.json');
   }
   getThumbnailsImagensProdutos(): Observable<any[]> {
     return this.http.get<any[]>('/assets/imagens-produtos-thumb.json');

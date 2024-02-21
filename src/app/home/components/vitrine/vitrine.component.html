@@ -1,0 +1,42 @@
+<section id="shopify-section-template--15602560893060__multi_column_eWeLzg" class="shopify-section">
+  <style>
+    #template--15602560893060__multi_column_eWeLzg {
+      --spacing-margin-top: 0px;
+      --spacing-margin-bottom: 0px;
+      --spacing-padding-top: 0px;
+      --spacing-padding-bottom: 0px;
+    }
+  </style>
+  <div id="template--15602560893060__multi_column_eWeLzg" class="ds-bg-transparent bg-no-repeat bg-contain bg-top lg:bg-center ds-color-default">
+    <div class="ds-page-container-full">
+      <div class="flex md:flex-col flex-col">
+        <div class="">
+          <div role="region" class="lg:px-4 mt-4 relative">
+            <div role="list" id="sliderVitrine" style="gap: 1em;" class="[&amp;>*:first-child]:ml-4 [&amp;>*:last-child]:mr-4 lg:[&amp;>*:first-child]:ml-0 lg:[&amp;>*:last-child]:mr-0 py-4 flex items-stretch overflow-scroll snap-x snap-mandatory ds-scrollbar-hidden">
+              <div *ngFor="let vitrine of vitrines" style="min-width: 360px" class="snap-x w-1/2 mr-1 lg:flex-1 shrink-0 ds-content-container flex flex-col items-center gap-4 rounded-lg ds-align-center">
+                <a style="gap: 1em" class="bg-cover bg-no-repeat bg-center snap-center w-full flex-1 no-underline ds-align-top">
+                  <img src="{{vitrine.imagem}}"
+                    width="3846"
+                    height="1800"
+                    loading="lazy"
+                    class="w-full h-auto mx-auto"/>
+                  <div class="flex flex-row flex-wrap gap-2 justify-center my-6"></div>
+                </a>
+              </div>
+            </div>
+            <button [class.hidden]="firstChild" class="ml-1 absolute flex justify-center left-0 w-10 h-10 my-auto sm:visible inset-y-1/2 text-white rounded-full opacity-40 ds-bg-accent-1 hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+                </svg> 
+              </button>
+              <button [class.hidden]="lastChild" class="mr-1 absolute flex justify-center right-0 w-10 h-10 my-auto sm:visible inset-y-1/2  text-center text-white rounded-full opacity-40 ds-bg-accent-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="m-auto w-6 h-6" width="24" height="24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                </svg>
+              </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

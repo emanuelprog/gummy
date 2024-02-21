@@ -9,6 +9,8 @@ import {ComunidadeComponent} from "../comunidade/comunidade.component";
 import {IconesPrincipalComponent} from "./components/icones-principal/icones-principal.component";
 import {BannersPrincipalComponent} from "./components/banners-principal/banners-principal.component";
 import { QueridinhosComponent } from './components/queridinhos/queridinhos.component';
+import { VitrineComponent } from './components/vitrine/vitrine.component';
+import { TopOfertasComponent } from './components/top-ofertas/top-ofertas.component';
 
 @Component({
     selector: 'app-home',
@@ -24,7 +26,9 @@ import { QueridinhosComponent } from './components/queridinhos/queridinhos.compo
         ComunidadeComponent,
         IconesPrincipalComponent,
         BannersPrincipalComponent,
-        QueridinhosComponent
+        QueridinhosComponent,
+        VitrineComponent,
+        TopOfertasComponent
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.css'
